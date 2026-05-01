@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5530600641201402"
-     crossorigin="anonymous"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="google-site-verification" content="-eQdOW7aj9LgXz9vBlOLylSC31Otkm3cFdxiy3WobbE" />
 <title>Legionbound Class Guide – How to Unlock Every Class</title>
 <meta name="description" content="Complete guide to unlocking every class in Legionbound. Starting classes, achievement unlocks, skill tree order, synergy loops and upgrade paths all explained.">
 <meta property="og:title" content="Legionbound Class Guide – Unlock Every Class">
-<meta property="og:description" content="Starting classes, achievement unlocks, skill tree strategy, and full synergy loop reference for Legionbound.">
+<meta property="og:description" content="Starting classes, achievement unlocks, optimal skill tree strategy, and full synergy loop reference for Legionbound.">
 <meta property="og:type" content="website">
 <style>
 :root {
@@ -86,6 +83,7 @@ p:last-child { margin-bottom: 0; }
 .tag-medium { background: var(--purple-dim);       border: 1px solid rgba(142,68,173,0.35);   color: #c390e8; }
 .tag-agile  { background: var(--red-dim);          border: 1px solid rgba(192,57,43,0.35);    color: #e8a090; }
 .tag-heavy  { background: var(--blue-dim);         border: 1px solid rgba(36,114,164,0.35);   color: #90bce8; }
+.tag-brutal { background: rgba(230,126,34,0.15);   border: 1px solid rgba(230,126,34,0.35);   color: #e8b060; }
 .tag-origin { background: rgba(201,168,76,0.12);   border: 1px solid rgba(201,168,76,0.3);    color: var(--gold); }
 
 /* ACHIEVEMENT UNLOCKS */
@@ -126,18 +124,20 @@ p:last-child { margin-bottom: 0; }
 .step-reason { font-size: 12px; color: var(--text-dim); line-height: 1.55; }
 
 /* LOOP CARDS */
-.loop-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
-@media(max-width:600px){ .loop-cards { grid-template-columns: 1fr; } }
+.loop-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 20px 0; }
 .loop-card { border-radius: 10px; padding: 18px; }
 .loop-card.agile { background: var(--red-dim);  border: 1.5px solid rgba(192,57,43,0.4); }
 .loop-card.heavy { background: var(--blue-dim); border: 1.5px solid rgba(36,114,164,0.4); }
+.loop-card.brutal { background: rgba(230,126,34,0.12); border: 1.5px solid rgba(230,126,34,0.4); }
 .loop-card h3 { margin-bottom: 10px; }
 .loop-card.agile h3 { color: #e87060; }
 .loop-card.heavy h3 { color: #60a8e8; }
+.loop-card.brutal h3 { color: #e8b060; }
 .class-chain { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
 .cls-pill { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 9px; border-radius: 12px; white-space: nowrap; }
 .agile .cls-pill { background: rgba(192,57,43,0.18); border: 1px solid rgba(192,57,43,0.4); color: #e8a090; }
 .heavy .cls-pill { background: rgba(36,114,164,0.18); border: 1px solid rgba(36,114,164,0.4); color: #90bce8; }
+.brutal .cls-pill { background: rgba(230,126,34,0.18); border: 1px solid rgba(230,126,34,0.4); color: #f0c080; }
 .chain-arrow { color: var(--text-dim); font-size: 10px; opacity: 0.6; }
 
 /* UPGRADE TABLE */
@@ -153,21 +153,13 @@ p:last-child { margin-bottom: 0; }
 .inf-title { text-align:center; font-size:18px; font-weight:700; color:var(--gold); letter-spacing:3px; text-transform:uppercase; margin-bottom:3px; }
 .inf-sub { text-align:center; font-size:10px; color:var(--gold-dim); letter-spacing:2px; text-transform:uppercase; margin-bottom:16px; }
 .inf-sec { text-align:center; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
-.lbl-h { color:#4a9fd4; } .lbl-a { color:#d45a4a; }
+.lbl-h { color:#4a9fd4; } .lbl-a { color:#d45a4a; } .lbl-b { color:#e89c4a; }
 canvas { display:block; }
-.inf-bottom { display:flex; gap:12px; align-items:flex-start; margin-top:14px; }
-.inf-agile { flex:1; }
+.inf-bottom { display:flex; gap:12px; align-items:flex-start; margin-top:14px; flex-wrap:wrap; }
+.inf-loop { flex:1; min-width:260px; }
 .inf-peasant { display:flex; flex-direction:column; align-items:center; gap:8px; padding:0 4px; flex-shrink:0; }
-.inf-pnote { text-align:center; font-size:10px; color:#8a7040; line-height:1.5; max-width:105px; }
+.inf-pnote { text-align:center; font-size:10px; color:#8a7040; line-height:1.5; max-width:120px; }
 .inf-pnote strong { display:block; color:var(--gold); font-size:10px; margin-bottom:2px; }
-
-/* TIPS */
-.tips { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
-@media(max-width:560px){ .tips { grid-template-columns: 1fr; } }
-.tip { background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; padding: 16px 18px; }
-.tip-num { font-size: 10px; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; margin-bottom: 5px; }
-.tip h3 { font-size: 13px; margin-bottom: 5px; }
-.tip p { font-size: 12px; margin: 0; }
 
 .kofi-btn {
   display: inline-flex; align-items: center; gap: 8px;
@@ -201,7 +193,7 @@ footer a { color: var(--gold); text-decoration: none; }
     <li><a href="#skilltree">Skill Tree</a></li>
     <li><a href="#loops">Loops</a></li>
     <li><a href="#paths">All Paths</a></li>
-</ul>
+  </ul>
   <a class="kofi-nav" href="https://ko-fi.com/ashi757" target="_blank">☕ Tip</a>
 </nav>
 
@@ -209,12 +201,6 @@ footer a { color: var(--gold); text-decoration: none; }
   <div class="hero-eyebrow">Legionbound Complete Guide</div>
   <h1>How to Unlock <span>Every Class</span></h1>
   <p class="hero-sub">Starting classes, achievement unlocks, optimal skill tree order, and the full synergy loop reference — all in one place.</p>
-  <div class="hero-badges">
-    <span class="badge">🎮 PC / Steam</span>
-    <span class="badge">29 Classes</span>
-    <span class="badge">5 Starting Classes</span>
-    <span class="badge">3 Unlock Methods</span>
-  </div>
 </div>
 
 <div class="container">
@@ -223,50 +209,19 @@ footer a { color: var(--gold); text-decoration: none; }
   <section id="mechanic">
     <div class="section-eyebrow">Core Mechanic</div>
     <h2>How Class Upgrades Work</h2>
-    <p>Legionbound uses a proximity-based upgrade system. Classes are arranged in two synergy loops — place a class next to the one that follows it in the loop and it will teach that unit how to upgrade.</p>
-    <div class="callout">
-      <div class="callout-label">The Rule</div>
-      <p>Each class <strong>teaches the next class in its loop</strong> how to upgrade. Position the teacher adjacent to the student on the battlefield to trigger the upgrade. The arrows in the infographic show the teaching direction.</p>
-    </div>
-    <p>For example: a <strong>Warrior</strong> standing next to a <strong>Lumberjack</strong> teaches the Lumberjack to upgrade. A <strong>Shieldmage</strong> standing next to a <strong>Guardian</strong> teaches the Guardian to upgrade.</p>
-    <p>There are three ways to get classes into your roster in the first place: you start with five, unlock others through achievements, and unlock the rest via the skill tree.</p>
+    <p>Legionbound uses a proximity-based upgrade system. Classes are arranged in three synergy loops. Place a class next to the one it teaches to trigger the upgrade.</p>
   </section>
 
   <!-- STARTING CLASSES -->
   <section id="starters">
     <div class="section-eyebrow">Available From The Start</div>
     <h2>Starting Classes</h2>
-    <p>These five classes are available immediately with no unlocking required. Notice that they give you entry points into both loops right away — Warrior and Cleric on the Heavy side, Ranger, Rogue and Wizard spread across key positions.</p>
     <div class="starter-grid">
-      <div class="starter-card heavy">
-        <div class="starter-icon">🪓</div>
-        <div class="starter-name">Warrior</div>
-        <div class="starter-role">Heavy Loop — teaches Lumberjack</div>
-      </div>
-      <div class="starter-card heavy">
-        <div class="starter-icon">📜</div>
-        <div class="starter-name">Cleric</div>
-        <div class="starter-role">Heavy Loop — teaches Witch</div>
-      </div>
-      <div class="starter-card heavy">
-        <div class="starter-icon">📖</div>
-        <div class="starter-name">Wizard</div>
-        <div class="starter-role">Heavy Loop — teaches Battlemage</div>
-      </div>
-      <div class="starter-card agile">
-        <div class="starter-icon">🏹</div>
-        <div class="starter-name">Ranger</div>
-        <div class="starter-role">Agile Loop — teaches Herbalist</div>
-      </div>
-      <div class="starter-card agile">
-        <div class="starter-icon">🗡</div>
-        <div class="starter-name">Rogue</div>
-        <div class="starter-role">Agile Loop — teaches Samurai</div>
-      </div>
-    </div>
-    <div class="callout">
-      <div class="callout-label">Starting Strategy</div>
-      <p>Warrior and Cleric give you two separate entry points into the Heavy loop immediately. Position them near their respective students early — Warrior near a Lumberjack slot, Cleric near a Witch slot — to start teaching chains as soon as possible.</p>
+      <div class="starter-card heavy"><div class="starter-icon">🪓</div><div class="starter-name">Warrior</div></div>
+      <div class="starter-card heavy"><div class="starter-icon">📜</div><div class="starter-name">Cleric</div></div>
+      <div class="starter-card heavy"><div class="starter-icon">📖</div><div class="starter-name">Wizard</div></div>
+      <div class="starter-card agile"><div class="starter-icon">🏹</div><div class="starter-name">Ranger</div></div>
+      <div class="starter-card agile"><div class="starter-icon">🗡</div><div class="starter-name">Rogue</div></div>
     </div>
   </section>
 
@@ -274,358 +229,108 @@ footer a { color: var(--gold); text-decoration: none; }
   <section id="achievements">
     <div class="section-eyebrow">Second Unlock Method</div>
     <h2>Achievement Unlocks</h2>
-    <p>Ten classes are unlocked by completing in-game achievements. These are earned through normal gameplay, so you'll pick them up naturally — but knowing which classes they are helps you plan around them rather than spending skill tree points unnecessarily.</p>
     <div class="achiev-grid">
-      <div class="achiev-pill">Tax Collector <span>Heavy Loop</span></div>
-      <div class="achiev-pill">Witch <span>Heavy Loop</span></div>
-      <div class="achiev-pill">Lumberjack <span>Heavy Loop</span></div>
-      <div class="achiev-pill">Priest <span>Heavy Loop</span></div>
-      <div class="achiev-pill">Barkeep <span>Agile Loop</span></div>
-      <div class="achiev-pill">Monk <span>Agile Loop</span></div>
-      <div class="achiev-pill">Artificer <span>Agile Loop</span></div>
-      <div class="achiev-pill">Herbalist <span>Agile Loop</span></div>
-      <div class="achiev-pill">Duelist <span>Agile Loop</span></div>
+      <div class="achiev-pill">Tax Collector <span>Brutal</span></div>
+      <div class="achiev-pill">Witch <span>Heavy</span></div>
+      <div class="achiev-pill">Lumberjack <span>Heavy</span></div>
+      <div class="achiev-pill">Priest <span>Heavy</span></div>
+      <div class="achiev-pill">Barkeep <span>Agile</span></div>
+      <div class="achiev-pill">Monk <span>Agile</span></div>
+      <div class="achiev-pill">Artificer <span>Agile</span></div>
+      <div class="achiev-pill">Herbalist <span>Agile</span></div>
+      <div class="achiev-pill">Duelist <span>Agile</span></div>
       <div class="achiev-pill">Peasant <span>Origin</span></div>
     </div>
-    <div class="callout">
-      <div class="callout-label">What This Means For Skill Tree Planning</div>
-      <p>Since Lumberjack, Priest, Witch, Herbalist, Monk, Barkeep, Artificer, and Duelist all come free from achievements, <strong>don't spend skill tree points on classes you'll unlock anyway</strong>. Focus skill tree points on classes that aren't available through achievements — especially ones that sit at the start of long teaching chains.</p>
-    </div>
   </section>
 
-  <!-- SKILL TREE -->
-  <section id="skilltree">
-    <div class="section-eyebrow">Third Unlock Method</div>
-    <h2>Skill Tree — Optimal Unlock Order</h2>
-    <p>Fourteen classes must be unlocked through the skill tree. The order you unlock them significantly affects how quickly you can build upgrade chains. Prioritize classes that sit at the head of the longest teaching sequences, and avoid spending points on classes that are covered by achievements.</p>
-
-    <div class="skill-tiers">
-      <div class="skill-tier easy">
-        <div class="tier-header">
-          <div class="tier-badge easy-badge">Easy Tier — 6 classes</div>
-          <div class="tier-desc">Mercenary · Guardian · Swashbuckler · Brawler · Druid · Shieldmage</div>
-        </div>
-        <div class="skill-steps">
-          <div class="skill-step">
-            <div class="step-num">1</div>
-            <div class="step-body">
-              <div class="step-name">Druid</div>
-              <div class="step-chain">Druid → Wizard (starter) → Battlemage → Shieldmage</div>
-              <div class="step-reason">Your starter Wizard is already on the field teaching Battlemage. Unlocking Druid adds a teacher for Wizard itself, extending the chain backwards and giving you three connected upgrades from a single unlock.</div>
-            </div>
+  <!-- LOOPS -->
+  <section id="loops">
+    <div class="section-eyebrow">Visual Reference</div>
+    <h2>Class Synergy Loops</h2>
+    <div class="infographic-wrap">
+      <div class="infographic-inner">
+        <div class="inf-title">Legionbound</div>
+        <div class="inf-sub">Corrected Synergy Loops</div>
+        
+        <div class="inf-sec lbl-h">Heavy &amp; Caster Loop (14)</div>
+        <canvas id="cH" style="width:100%;height:auto;"></canvas>
+        
+        <div class="inf-bottom">
+          <div class="inf-loop">
+            <div class="inf-sec lbl-a">Agile Martial Loop (10)</div>
+            <canvas id="cA"></canvas>
           </div>
-          <div class="skill-step">
-            <div class="step-num">2</div>
-            <div class="step-body">
-              <div class="step-name">Guardian</div>
-              <div class="step-chain">Shieldmage → Guardian → Smith → Knight (→ Priest, earned via achievement)</div>
-              <div class="step-reason">Unlocking Guardian opens Smith and Knight downstream. Priest comes free from achievements, so once Knight is teaching Priest you get the full Smith → Knight → Priest chain without extra spend.</div>
-            </div>
+          <div class="inf-loop">
+            <div class="inf-sec lbl-b">Brutal Economy Loop (4)</div>
+            <canvas id="cB"></canvas>
           </div>
-          <div class="skill-step">
-            <div class="step-num">3</div>
-            <div class="step-body">
-              <div class="step-name">Swashbuckler</div>
-              <div class="step-chain">Swashbuckler → Gunslinger → Duelist (achievement) → Rogue (starter)</div>
-              <div class="step-reason">Swashbuckler kicks off the longest unlock chain in the Agile loop. Duelist comes free from achievements and Rogue is a starter, so you only need to unlock Swashbuckler and Gunslinger to complete this entire segment.</div>
-            </div>
-          </div>
-          <div class="skill-step">
-            <div class="step-num">4</div>
-            <div class="step-body">
-              <div class="step-name">Brawler</div>
-              <div class="step-chain">Mercenary → Brawler → Barbarian → Warrior (starter)</div>
-              <div class="step-reason">Brawler teaches Barbarian which wraps the Heavy loop back to your starter Warrior. Mercenary is also in Easy tier so both will be available — unlock Brawler first since it's the longer chain anchor.</div>
-            </div>
-          </div>
-          <div class="skill-step">
-            <div class="step-num">5</div>
-            <div class="step-body">
-              <div class="step-name">Mercenary</div>
-              <div class="step-chain">Tax Collector (achievement) → Mercenary → Brawler (already unlocked)</div>
-              <div class="step-reason">Tax Collector comes free from achievements, so unlocking Mercenary completes that segment automatically. With Brawler already on the field this closes a tight three-class chain with only one skill point.</div>
-            </div>
-          </div>
-          <div class="skill-step">
-            <div class="step-num">6</div>
-            <div class="step-body">
-              <div class="step-name">Shieldmage</div>
-              <div class="step-chain">Battlemage → Shieldmage → Guardian (already unlocked)</div>
-              <div class="step-reason">Last in Easy tier because Guardian is already unlocked and Battlemage will be available through Wizard's teaching chain. Unlock Shieldmage to close the Battlemage → Shieldmage → Guardian segment.</div>
-            </div>
+          <div class="inf-peasant">
+            <canvas id="cP"></canvas>
+            <div class="inf-pnote"><strong>Peasant</strong><br>Works with any 3 classes from any loop</div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="skill-tier medium">
-        <div class="tier-header">
-          <div class="tier-badge medium-badge">Medium Tier — 8 classes</div>
-          <div class="tier-desc">Gunslinger · Paladin · Samurai · Knight · Bard · Sorcerer · Barbarian · Battlemage · Smith</div>
+    <div class="loop-cards">
+      <div class="loop-card agile">
+        <h3>⚔️ Agile Martial Loop — 10 Classes</h3>
+        <div class="class-chain">
+          Rogue → Duelist → Gunslinger → Swashbuckler → Bard → Monk → Barkeep → Herbalist → Ranger → Artificer → <strong>back to Rogue</strong>
         </div>
-        <div class="skill-steps">
-          <div class="skill-step">
-            <div class="step-num">1</div>
-            <div class="step-body">
-              <div class="step-name">Battlemage</div>
-              <div class="step-chain">Wizard (starter) → Battlemage → Shieldmage (Easy unlock)</div>
-              <div class="step-reason">Your starter Wizard is already teaching towards Battlemage. Unlocking it here connects the Druid → Wizard chain from Easy tier all the way through to Shieldmage and Guardian.</div>
-            </div>
-          </div>
-          <div class="skill-step">
-            <div class="step-num">2</div>
-            <div class="step-body">
-              <div class="step-name">Smith</div>
-              <div class="step-chain">Guardian (Easy unlock) → Smith → Knight → Priest (achievement)</div>
-              <div class="step-reason">With Guardian already unlocked, Smith slots directly into the chain. Knight and Priest follow immediately — Priest is free from achievements so this three-step chain costs only one skill point.</div>
-            </div>
-          </div>
-          <div class="skill-step">
-            <div class="step-num">3</div>
-            <div class="step-body">
-              <div class="step-name">Sorcerer</div>
-              <div class="step-chain">Witch (achievement) → Sorcerer → Tax Collector (achievement)</div>
-              <div class="step-reason">Both Witch and Tax Collector come free from achievements. Unlocking Sorcerer fills the only gap in this three-class segment of the Heavy loop for a single skill point.</div>
-            </div>
-          </div>
-          <div class="skill-step">
-            <div class="step-num">4</div>
-            <div class="step-body">
-              <div class="step-name">Paladin</div>
-              <div class="step-chain">Priest (achievement) → Paladin → Cleric (starter)</div>
-              <div class="step-reason">Priest is free from achievements and Cleric is a starter — unlocking Paladin is the single link that completes this entire three-class segment with no further spend.</div>
-            </div>
-          </div>
-          <div class="skill-step">
-            <div class="step-num">5</div>
-            <div class="step-body">
-              <div class="step-name">Barbarian</div>
-              <div class="step-chain">Brawler (Easy unlock) → Barbarian → Warrior (starter)</div>
-              <div class="step-reason">Brawler is already unlocked and Warrior is a starter. Unlocking Barbarian completes the loop wrap on the Heavy side — a single point closes the full Heavy loop.</div>
-            </div>
-          </div>
-          <div class="skill-step">
-            <div class="step-num">6</div>
-            <div class="step-body">
-              <div class="step-name">Gunslinger</div>
-              <div class="step-chain">Swashbuckler (Easy unlock) → Gunslinger → Duelist (achievement)</div>
-              <div class="step-reason">Swashbuckler is already on the field and Duelist comes from achievements. One point fills the gap and completes the Swashbuckler → Gunslinger → Duelist → Rogue chain in the Agile loop.</div>
-            </div>
-          </div>
-          <div class="skill-step">
-            <div class="step-num">7</div>
-            <div class="step-body">
-              <div class="step-name">Knight</div>
-              <div class="step-chain">Smith (already unlocked) → Knight → Priest (achievement)</div>
-              <div class="step-reason">Smith is already unlocked above and Priest is free. Knight fills the last gap in the Smith → Knight → Priest chain on the Heavy loop.</div>
-            </div>
-          </div>
-          <div class="skill-step">
-            <div class="step-num">8</div>
-            <div class="step-body">
-              <div class="step-name">Bard</div>
-              <div class="step-chain">Monk (achievement) → Bard → Swashbuckler (Easy unlock)</div>
-              <div class="step-reason">Monk comes free and Swashbuckler is already unlocked. Bard is the single missing link in the Monk → Bard → Swashbuckler chain on the Agile loop.</div>
-            </div>
-          </div>
-          <div class="skill-step">
-            <div class="step-num">9</div>
-            <div class="step-body">
-              <div class="step-name">Samurai</div>
-              <div class="step-chain">Rogue (starter) → Samurai → Artificer (achievement)</div>
-              <div class="step-reason">Unlock last — Rogue is a starter and Artificer comes free from achievements. Samurai completes the Agile loop wrap, giving you the full circular chain on both loops.</div>
-            </div>
-          </div>
+      </div>
+      <div class="loop-card heavy">
+        <h3>🛡️ Heavy &amp; Caster Loop — 14 Classes</h3>
+        <div class="class-chain">
+          Wizard → Druid → Lumberjack → Warrior → Sorcerer → Witch → Cleric → Paladin → Priest → Knight → Smith → Guardian → Shieldmage → Battlemage → <strong>back to Wizard</strong>
+        </div>
+      </div>
+      <div class="loop-card brutal">
+        <h3>💢 Brutal Economy Loop — 4 Classes</h3>
+        <div class="class-chain">
+          Barbarian → Brawler → Mercenary → Tax Collector → <strong>back to Barbarian</strong>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- INFOGRAPHIC -->
- <section id="loops">
-  <div class="section-eyebrow">Visual Reference</div>
-  <h2>Class Synergy Loops</h2>
-  <p>
-    Arrows show the teaching direction. Each class teaches the one the arrow points to.
-    Follow each loop clockwise to see the full upgrade chain.
-  </p>
-
-  <div class="infographic-wrap">
-    <div class="infographic-inner">
-      <div class="inf-title">Legionbound</div>
-      <div class="inf-sub">Class Synergies</div>
-
-      <div class="inf-sec lbl-h">Heavy & Caster Loop</div>
-      <canvas id="cH"></canvas>
-
-      <div class="inf-bottom">
-        <div class="inf-agile">
-          <div class="inf-sec lbl-a" style="margin-top:4px">Agile Martial Loop</div>
-          <canvas id="cA"></canvas>
-        </div>
-
-        <div class="inf-peasant">
-          <canvas id="cP"></canvas>
-          <div class="inf-pnote">
-            <strong>Peasant Synergy Node</strong><br/>
-            Combine any three classes from any loop path
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="loop-cards">
-
-    <!-- AGILE LOOP -->
-    <div class="loop-card agile">
-      <h3>⚔ Agile Martial Loop — 10 Classes</h3>
-      <div class="class-chain">
-        <span class="cls-pill">Rogue</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Duelist</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Gunslinger</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Swashbuckler</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Bard</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Monk</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Barkeep</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Herbalist</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Ranger</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Artificer</span><span class="chain-arrow">→ loops back</span>
-      </div>
-    </div>
-
-    <!-- HEAVY LOOP -->
-    <div class="loop-card heavy">
-      <h3>🛡 Heavy & Caster Loop — 14 Classes</h3>
-      <div class="class-chain">
-        <span class="cls-pill">Wizard</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Druid</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Lumberjack</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Warrior</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Sorcerer</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Witch</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Cleric</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Paladin</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Priest</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Knight</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Smith</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Guardian</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Shieldmage</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Battlemage</span><span class="chain-arrow">→ loops back</span>
-      </div>
-    </div>
-
-    <!-- ECONOMY / BRUTE LOOP -->
-    <div class="loop-card heavy">
-      <h3>💢 Brutal Economy Loop — 5 Classes</h3>
-      <div class="class-chain">
-        <span class="cls-pill">Barbarian</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Brawler</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Mercenary</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Tax Collector</span><span class="chain-arrow">→</span>
-        <span class="cls-pill">Barbarian</span><span class="chain-arrow">→ loops back</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- FULL PATH TABLE -->
-<section id="paths">
-  <div class="section-eyebrow">Full Reference</div>
-  <h2>All Classes — Unlock Method & Teacher</h2>
-  <p>
-    Every class, how you get it, and what it teaches.
-    The <strong>Teaches</strong> column shows the next class in its synergy loop.
-  </p>
-
-  <table class="upgrade-table">
-    <thead>
-      <tr>
-        <th>Class</th>
-        <th>How to Unlock</th>
-        <th>Teaches (Next Class)</th>
-        <th>Loop</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr><td>Warrior</td><td>Starter</td><td>Lumberjack</td><td>Heavy</td></tr>
-      <tr><td>Lumberjack</td><td>Skill Tree</td><td>Druid</td><td>Heavy</td></tr>
-      <tr><td>Druid</td><td>Skill Tree</td><td>Wizard</td><td>Heavy</td></tr>
-      <tr><td>Wizard</td><td>Starter</td><td>Battlemage</td><td>Heavy</td></tr>
-      <tr><td>Battlemage</td><td>Skill Tree</td><td>Shieldmage</td><td>Heavy</td></tr>
-      <tr><td>Shieldmage</td><td>Skill Tree</td><td>Guardian</td><td>Heavy</td></tr>
-      <tr><td>Guardian</td><td>Skill Tree</td><td>Smith</td><td>Heavy</td></tr>
-      <tr><td>Smith</td><td>Skill Tree</td><td>Knight</td><td>Heavy</td></tr>
-      <tr><td>Knight</td><td>Skill Tree</td><td>Priest</td><td>Heavy</td></tr>
-      <tr><td>Priest</td><td>Achievement</td><td>Paladin</td><td>Heavy</td></tr>
-      <tr><td>Paladin</td><td>Skill Tree</td><td>Cleric</td><td>Heavy</td></tr>
-      <tr><td>Cleric</td><td>Starter</td><td>Witch</td><td>Heavy</td></tr>
-      <tr><td>Witch</td><td>Skill Tree</td><td>Sorcerer</td><td>Heavy</td></tr>
-      <tr><td>Sorcerer</td><td>Skill Tree</td><td>Tax Collector</td><td>Heavy</td></tr>
-
-      <tr><td>Tax Collector</td><td>Skill Tree</td><td>Barbarian</td><td>Brute</td></tr>
-      <tr><td>Barbarian</td><td>Skill Tree</td><td>Brawler</td><td>Brute</td></tr>
-      <tr><td>Brawler</td><td>Skill Tree</td><td>Mercenary</td><td>Brute</td></tr>
-      <tr><td>Mercenary</td><td>Skill Tree</td><td>Tax Collector</td><td>Brute</td></tr>
-
-      <tr><td>Rogue</td><td>Starter</td><td>Duelist</td><td>Agile</td></tr>
-      <tr><td>Duelist</td><td>Skill Tree</td><td>Gunslinger</td><td>Agile</td></tr>
-      <tr><td>Gunslinger</td><td>Skill Tree</td><td>Swashbuckler</td><td>Agile</td></tr>
-      <tr><td>Swashbuckler</td><td>Skill Tree</td><td>Bard</td><td>Agile</td></tr>
-      <tr><td>Bard</td><td>Skill Tree</td><td>Monk</td><td>Agile</td></tr>
-      <tr><td>Monk</td><td>Skill Tree</td><td>Barkeep</td><td>Agile</td></tr>
-      <tr><td>Barkeep</td><td>Skill Tree</td><td>Herbalist</td><td>Agile</td></tr>
-      <tr><td>Herbalist</td><td>Skill Tree</td><td>Ranger</td><td>Agile</td></tr>
-      <tr><td>Ranger</td><td>Starter</td><td>Artificer</td><td>Agile</td></tr>
-      <tr><td>Artificer</td><td>Skill Tree</td><td>Samurai</td><td>Agile</td></tr>
-      <tr><td>Samurai</td><td>Skill Tree</td><td>Rogue</td><td>Agile</td></tr>
-
-      <tr><td>Peasant</td><td>Achievement</td><td>—</td><td>Origin</td></tr>
-    </tbody>
-  </table>
-</section>
-
-  <!-- ALL PATHS -->
+  <!-- FULL TABLE -->
   <section id="paths">
     <div class="section-eyebrow">Full Reference</div>
-    <h2>All Classes — Unlock Method &amp; Teacher</h2>
-    <p>Every class, how you get it, and what it teaches. The <strong>Teaches</strong> column shows which class will upgrade when this unit stands next to it.</p>
+    <h2>All Classes — Unlock &amp; Teaches</h2>
     <table class="upgrade-table">
-      <thead>
-        <tr><th>Class</th><th>How to Unlock</th><th>Teaches</th><th>Loop</th></tr>
-      </thead>
+      <thead><tr><th>Class</th><th>Unlock</th><th>Teaches</th><th>Loop</th></tr></thead>
       <tbody>
-        <tr><td>Warrior</td><td><span class="tag tag-start">Starter</span></td><td>Lumberjack</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Cleric</td><td><span class="tag tag-start">Starter</span></td><td>Witch</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Wizard</td><td><span class="tag tag-start">Starter</span></td><td>Battlemage</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Ranger</td><td><span class="tag tag-start">Starter</span></td><td>Herbalist</td><td><span class="tag tag-agile">Agile</span></td></tr>
-        <tr><td>Rogue</td><td><span class="tag tag-start">Starter</span></td><td>Samurai</td><td><span class="tag tag-agile">Agile</span></td></tr>
-        <tr><td>Lumberjack</td><td><span class="tag tag-achiev">Achievement</span></td><td>Druid</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Priest</td><td><span class="tag tag-achiev">Achievement</span></td><td>Paladin</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Witch</td><td><span class="tag tag-achiev">Achievement</span></td><td>Sorcerer</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Tax Collector</td><td><span class="tag tag-achiev">Achievement</span></td><td>Mercenary</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Herbalist</td><td><span class="tag tag-achiev">Achievement</span></td><td>Barkeep</td><td><span class="tag tag-agile">Agile</span></td></tr>
-        <tr><td>Barkeep</td><td><span class="tag tag-achiev">Achievement</span></td><td>Monk</td><td><span class="tag tag-agile">Agile</span></td></tr>
-        <tr><td>Monk</td><td><span class="tag tag-achiev">Achievement</span></td><td>Bard</td><td><span class="tag tag-agile">Agile</span></td></tr>
-        <tr><td>Artificer</td><td><span class="tag tag-achiev">Achievement</span></td><td>Ranger</td><td><span class="tag tag-agile">Agile</span></td></tr>
-        <tr><td>Duelist</td><td><span class="tag tag-achiev">Achievement</span></td><td>Rogue</td><td><span class="tag tag-agile">Agile</span></td></tr>
-        <tr><td>Peasant</td><td><span class="tag tag-achiev">Achievement</span></td><td>—</td><td><span class="tag tag-origin">Origin</span></td></tr>
-        <tr><td>Druid</td><td><span class="tag tag-easy">Skill Tree (Easy)</span></td><td>Wizard</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Guardian</td><td><span class="tag tag-easy">Skill Tree (Easy)</span></td><td>Smith</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Shieldmage</td><td><span class="tag tag-easy">Skill Tree (Easy)</span></td><td>Guardian</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Swashbuckler</td><td><span class="tag tag-easy">Skill Tree (Easy)</span></td><td>Gunslinger</td><td><span class="tag tag-agile">Agile</span></td></tr>
-        <tr><td>Brawler</td><td><span class="tag tag-easy">Skill Tree (Easy)</span></td><td>Barbarian</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Mercenary</td><td><span class="tag tag-easy">Skill Tree (Easy)</span></td><td>Brawler</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Battlemage</td><td><span class="tag tag-medium">Skill Tree (Medium)</span></td><td>Shieldmage</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Smith</td><td><span class="tag tag-medium">Skill Tree (Medium)</span></td><td>Knight</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Knight</td><td><span class="tag tag-medium">Skill Tree (Medium)</span></td><td>Priest</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Paladin</td><td><span class="tag tag-medium">Skill Tree (Medium)</span></td><td>Cleric</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Sorcerer</td><td><span class="tag tag-medium">Skill Tree (Medium)</span></td><td>Tax Collector</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Barbarian</td><td><span class="tag tag-medium">Skill Tree (Medium)</span></td><td>Warrior</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
-        <tr><td>Gunslinger</td><td><span class="tag tag-medium">Skill Tree (Medium)</span></td><td>Duelist</td><td><span class="tag tag-agile">Agile</span></td></tr>
-        <tr><td>Bard</td><td><span class="tag tag-medium">Skill Tree (Medium)</span></td><td>Swashbuckler</td><td><span class="tag tag-agile">Agile</span></td></tr>
-        <tr><td>Samurai</td><td><span class="tag tag-medium">Skill Tree (Medium)</span></td><td>Artificer</td><td><span class="tag tag-agile">Agile</span></td></tr>
+        <tr><td>Warrior</td><td>Starter</td><td>Sorcerer</td><td>Heavy</td></tr>
+        <tr><td>Cleric</td><td>Starter</td><td>Paladin</td><td>Heavy</td></tr>
+        <tr><td>Wizard</td><td>Starter</td><td>Druid</td><td>Heavy</td></tr>
+        <tr><td>Ranger</td><td>Starter</td><td>Artificer</td><td>Agile</td></tr>
+        <tr><td>Rogue</td><td>Starter</td><td>Duelist</td><td>Agile</td></tr>
+        <tr><td>Lumberjack</td><td>Achievement</td><td>Warrior</td><td>Heavy</td></tr>
+        <tr><td>Priest</td><td>Achievement</td><td>Knight</td><td>Heavy</td></tr>
+        <tr><td>Witch</td><td>Achievement</td><td>Cleric</td><td>Heavy</td></tr>
+        <tr><td>Tax Collector</td><td>Achievement</td><td>Barbarian</td><td>Brutal</td></tr>
+        <tr><td>Herbalist</td><td>Achievement</td><td>Ranger</td><td>Agile</td></tr>
+        <tr><td>Barkeep</td><td>Achievement</td><td>Herbalist</td><td>Agile</td></tr>
+        <tr><td>Monk</td><td>Achievement</td><td>Barkeep</td><td>Agile</td></tr>
+        <tr><td>Artificer</td><td>Achievement</td><td>Rogue</td><td>Agile</td></tr>
+        <tr><td>Duelist</td><td>Achievement</td><td>Gunslinger</td><td>Agile</td></tr>
+        <tr><td>Peasant</td><td>Achievement</td><td>—</td><td>Origin</td></tr>
+        <tr><td>Druid</td><td>Skill Tree</td><td>Lumberjack</td><td>Heavy</td></tr>
+        <tr><td>Guardian</td><td>Skill Tree</td><td>Smith</td><td>Heavy</td></tr>
+        <tr><td>Shieldmage</td><td>Skill Tree</td><td>Guardian</td><td>Heavy</td></tr>
+        <tr><td>Swashbuckler</td><td>Skill Tree</td><td>Bard</td><td>Agile</td></tr>
+        <tr><td>Brawler</td><td>Skill Tree</td><td>Mercenary</td><td>Brutal</td></tr>
+        <tr><td>Mercenary</td><td>Skill Tree</td><td>Tax Collector</td><td>Brutal</td></tr>
+        <tr><td>Battlemage</td><td>Skill Tree</td><td>Wizard</td><td>Heavy</td></tr>
+        <tr><td>Smith</td><td>Skill Tree</td><td>Knight</td><td>Heavy</td></tr>
+        <tr><td>Knight</td><td>Skill Tree</td><td>Priest</td><td>Heavy</td></tr>
+        <tr><td>Paladin</td><td>Skill Tree</td><td>Cleric</td><td>Heavy</td></tr>
+        <tr><td>Sorcerer</td><td>Skill Tree</td><td>Witch</td><td>Heavy</td></tr>
+        <tr><td>Barbarian</td><td>Skill Tree</td><td>Brawler</td><td>Brutal</td></tr>
+        <tr><td>Gunslinger</td><td>Skill Tree</td><td>Swashbuckler</td><td>Agile</td></tr>
+        <tr><td>Bard</td><td>Skill Tree</td><td>Monk</td><td>Agile</td></tr>
+        <tr><td>Samurai</td><td>Skill Tree</td><td>Artificer</td><td>Agile</td></tr>
       </tbody>
     </table>
   </section>
@@ -636,15 +341,16 @@ footer a { color: var(--gold); text-decoration: none; }
   <p style="margin-bottom:16px; font-size:13px; color:var(--text-dim); max-width:400px; margin-left:auto; margin-right:auto; line-height:1.6;">
     This guide is free and always will be.<br>If it helped you, a coffee keeps it updated.
   </p>
-  <a class="kofi-btn" href="https://ko-fi.com/ashi757" target="_blank">☕ &nbsp;Support the Guide</a>
-  <p style="margin-top:20px">Legionbound Class Guide &nbsp;·&nbsp; Fan-made resource &nbsp;·&nbsp; Not affiliated with the developers</p>
-  <p style="margin-top:6px"><a href="https://store.steampowered.com/search/?term=legionbound" target="_blank">Find Legionbound on Steam →</a></p>
+  <a class="kofi-btn" href="https://ko-fi.com/ashi757" target="_blank">☕ Support the Guide</a>
 </footer>
 
 <script>
-var HEAVY=['Warrior','Lumberjack','Druid','Wizard','Battlemage','Shieldmage','Guardian','Smith','Knight','Priest','Paladin','Cleric','Witch','Sorcerer','Tax Collector','Mercenary','Brawler','Barbarian'];
-var AGILE=['Samurai','Artificer','Ranger','Herbalist','Barkeep','Monk','Bard','Swashbuckler','Gunslinger','Duelist','Rogue'];
-var R=22,FS=9.5,HC='rgba(74,159,212,0.9)',AC='rgba(212,90,74,0.9)',GC='#c9a84c';
+// ==================== FULL ORIGINAL ICON FUNCTION RESTORED ====================
+var HEAVY = ['Wizard','Druid','Lumberjack','Warrior','Sorcerer','Witch','Cleric','Paladin','Priest','Knight','Smith','Guardian','Shieldmage','Battlemage'];
+var AGILE = ['Rogue','Duelist','Gunslinger','Swashbuckler','Bard','Monk','Barkeep','Herbalist','Ranger','Artificer'];
+var BRUTAL = ['Barbarian','Brawler','Mercenary','Tax Collector'];
+var R=22, FS=9.5, HC='rgba(74,159,212,0.9)', AC='rgba(212,90,74,0.9)', BC='rgba(232,156,74,0.9)', GC='#c9a84c';
+
 function icon(ctx,name,x,y,col){
   ctx.save();ctx.lineCap='round';ctx.lineJoin='round';
   var n=name.toLowerCase().replace(/\s/g,'');
@@ -679,6 +385,7 @@ function icon(ctx,name,x,y,col){
   else if(n==='rogue'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x-2,y+9);ctx.lineTo(x+7,y-7);ctx.lineTo(x+5,y-9);ctx.lineTo(x-2,y+9);ctx.closePath();ctx.stroke();ctx.strokeStyle='#d4c49a';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x-4,y+3);ctx.lineTo(x+4,y-1);ctx.stroke();}
   ctx.restore();
 }
+
 function getPosns(n,W,hPad,vPad,rowH){
   var rc=n-2,tc=Math.ceil(rc/2),bc=rc-tc,pos=[],tY=vPad,bY=vPad+rowH*2,mY=vPad+rowH;
   var sT=(W-hPad*2)/tc,sB=bc>0?(W-hPad*2)/bc:1;
@@ -688,6 +395,7 @@ function getPosns(n,W,hPad,vPad,rowH){
   pos.push({x:hPad+8,y:mY});
   return pos;
 }
+
 function arrow(ctx,x1,y1,x2,y2,col){
   var dx=x2-x1,dy=y2-y1,d=Math.sqrt(dx*dx+dy*dy);if(d<1)return;
   var ux=dx/d,uy=dy/d,sx=x1+ux*(R+5),sy=y1+uy*(R+5),ex=x2-ux*(R+8),ey=y2-uy*(R+8);
@@ -695,14 +403,14 @@ function arrow(ctx,x1,y1,x2,y2,col){
   var a=Math.atan2(ey-sy,ex-sx),as=7;
   ctx.beginPath();ctx.moveTo(ex,ey);ctx.lineTo(ex-as*Math.cos(a-0.4),ey-as*Math.sin(a-0.4));ctx.moveTo(ex,ey);ctx.lineTo(ex-as*Math.cos(a+0.4),ey-as*Math.sin(a+0.4));ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.lineCap='round';ctx.stroke();
 }
+
 function node(ctx,x,y,name,col){
   ctx.beginPath();ctx.arc(x,y,R,0,Math.PI*2);ctx.fillStyle='#0d0d18';ctx.fill();ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.stroke();
   icon(ctx,name,x,y-4,col);
   ctx.font='700 '+FS+'px Georgia,serif';ctx.fillStyle='#d4c49a';ctx.textAlign='center';ctx.textBaseline='top';
-  var w=name.split(' ');
-  if(w.length>1&&name.length>9){var m=Math.ceil(w.length/2);ctx.fillText(w.slice(0,m).join(' ').toUpperCase(),x,y+R+4);ctx.fillText(w.slice(m).join(' ').toUpperCase(),x,y+R+14);}
-  else{ctx.fillText(name.toUpperCase(),x,y+R+4);}
+  ctx.fillText(name.toUpperCase(),x,y+R+4);
 }
+
 function renderLoop(id,classes,col,W){
   var cv=document.getElementById(id),n=classes.length,hPad=30;
   var rc=n-2,tc=Math.ceil(rc/2),bc=rc-tc;
@@ -714,31 +422,28 @@ function renderLoop(id,classes,col,W){
   for(var i=0;i<n;i++) arrow(ctx,pos[i].x,pos[i].y,pos[(i+1)%n].x,pos[(i+1)%n].y,col);
   for(var i=0;i<n;i++) node(ctx,pos[i].x,pos[i].y,classes[i],col);
 }
+
 function peasant(){
-  var cv=document.getElementById('cP'),S=R*2+20;cv.width=S;cv.height=S+20;
+  var cv=document.getElementById('cP'),S=R*2+30;cv.width=S;cv.height=S+20;
   var ctx=cv.getContext('2d'),cx=S/2,cy=S/2;
   ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.fillStyle='#1a1408';ctx.fill();ctx.strokeStyle=GC;ctx.lineWidth=2;ctx.stroke();
   ctx.save();ctx.lineCap='round';ctx.strokeStyle=GC;ctx.lineWidth=1.5;
   ctx.beginPath();ctx.moveTo(cx,cy+8);ctx.lineTo(cx,cy-7);ctx.stroke();
-  ctx.beginPath();ctx.moveTo(cx-3,cy+8);ctx.quadraticCurveTo(cx-6,cy,cx-1,cy-5);ctx.stroke();
-  ctx.beginPath();ctx.moveTo(cx+3,cy+8);ctx.quadraticCurveTo(cx+6,cy,cx+1,cy-5);ctx.stroke();
-  ctx.beginPath();ctx.moveTo(cx-5,cy+8);ctx.quadraticCurveTo(cx-9,cy+2,cx-3,cy-3);ctx.stroke();
-  ctx.beginPath();ctx.moveTo(cx+5,cy+8);ctx.quadraticCurveTo(cx+9,cy+2,cx+3,cy-3);ctx.stroke();
   ctx.fillStyle=GC;[[0,-8],[-1,-6],[1,-6],[-3,-4],[3,-4],[-5,-3],[5,-3]].forEach(function(p){ctx.beginPath();ctx.arc(cx+p[0],cy+p[1],1.5,0,Math.PI*2);ctx.fill();});
-  ctx.beginPath();ctx.moveTo(cx-4,cy+5);ctx.lineTo(cx+4,cy+5);ctx.strokeStyle='#d4c49a';ctx.lineWidth=1.5;ctx.stroke();
   ctx.restore();
   ctx.font='700 '+FS+'px Georgia,serif';ctx.fillStyle=GC;ctx.textAlign='center';ctx.textBaseline='top';ctx.fillText('PEASANT',cx,cy+R+5);
 }
+
 function render(){
-  var inner=document.querySelector('.infographic-inner');
-  var W=inner.offsetWidth-32;
-  renderLoop('cH',HEAVY,HC,W);
+  var W = document.querySelector('.infographic-inner').offsetWidth - 40;
+  renderLoop('cH', HEAVY, HC, W);
+  renderLoop('cA', AGILE, AC, Math.floor(W*0.48));
+  renderLoop('cB', BRUTAL, BC, Math.floor(W*0.48));
   peasant();
-  var pc=document.querySelector('.inf-peasant');
-  renderLoop('cA',AGILE,AC,Math.max(W-pc.offsetWidth-12,180));
 }
-window.addEventListener('load',function(){setTimeout(render,150);});
-window.addEventListener('resize',function(){setTimeout(render,150);});
+
+window.addEventListener('load', () => setTimeout(render, 200));
+window.addEventListener('resize', () => setTimeout(render, 200));
 </script>
 </body>
 </html>

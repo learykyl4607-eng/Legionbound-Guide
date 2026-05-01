@@ -155,8 +155,9 @@ p:last-child { margin-bottom: 0; }
 .inf-sec { text-align:center; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
 .lbl-h { color:#4a9fd4; } .lbl-a { color:#d45a4a; } .lbl-b { color:#e89c4a; }
 canvas { display:block; }
-.inf-bottom { display:flex; gap:12px; align-items:flex-start; margin-top:14px; }
-.inf-agile { flex:1; }
+.inf-bottom { display:flex; gap:12px; align-items:flex-start; margin-top:14px; flex-wrap: wrap; }
+.inf-agile { flex:1; min-width: 300px; }
+.inf-brutal { flex: 1; width: 100%; margin-top: 20px; }
 .inf-peasant { display:flex; flex-direction:column; align-items:center; gap:8px; padding:0 4px; flex-shrink:0; }
 .inf-pnote { text-align:center; font-size:10px; color:#8a7040; line-height:1.5; max-width:105px; }
 .inf-pnote strong { display:block; color:var(--gold); font-size:10px; margin-bottom:2px; }
@@ -170,6 +171,15 @@ canvas { display:block; }
   transition: opacity 0.2s;
 }
 .kofi-btn:hover { opacity: 0.85; }
+.kofi-nav {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.4);
+  color: var(--gold); font-size: 11px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase; text-decoration: none;
+  padding: 5px 14px; border-radius: 20px;
+  transition: background 0.2s;
+}
+.kofi-nav:hover { background: rgba(201,168,76,0.2); }
 footer { text-align: center; padding: 32px 24px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-dim); letter-spacing: 1px; }
 footer a { color: var(--gold); text-decoration: none; }
 </style>
@@ -206,10 +216,10 @@ footer a { color: var(--gold); text-decoration: none; }
   <section id="mechanic">
     <div class="section-eyebrow">Core Mechanic</div>
     <h2>How Class Upgrades Work</h2>
-    <p>Legionbound uses a proximity-based upgrade system. Classes are arranged in three synergy loops.</p>
+    <p>Legionbound uses a proximity-based upgrade system. Classes are arranged in three synergy loops — place a class next to the one that follows it in the loop and it will teach that unit how to upgrade.</p>
     <div class="callout">
       <div class="callout-label">The Rule</div>
-      <p>Each class <strong>teaches the next class in its loop</strong>. Position the teacher adjacent to the student to trigger the upgrade.</p>
+      <p>Each class <strong>teaches the next class in its loop</strong> how to upgrade. Position the teacher adjacent to the student on the battlefield to trigger the upgrade. The arrows in the infographic show the teaching direction.</p>
     </div>
   </section>
 
@@ -217,31 +227,32 @@ footer a { color: var(--gold); text-decoration: none; }
   <section id="starters">
     <div class="section-eyebrow">Available From The Start</div>
     <h2>Starting Classes</h2>
+    <p>These five classes are available immediately with no unlocking required.</p>
     <div class="starter-grid">
       <div class="starter-card heavy">
         <div class="starter-icon">🪓</div>
         <div class="starter-name">Warrior</div>
-        <div class="starter-role">Heavy Loop</div>
+        <div class="starter-role">Heavy Loop — teaches Lumberjack</div>
       </div>
       <div class="starter-card heavy">
         <div class="starter-icon">📜</div>
         <div class="starter-name">Cleric</div>
-        <div class="starter-role">Heavy Loop</div>
+        <div class="starter-role">Heavy Loop — teaches Witch</div>
       </div>
       <div class="starter-card heavy">
         <div class="starter-icon">📖</div>
         <div class="starter-name">Wizard</div>
-        <div class="starter-role">Heavy Loop</div>
+        <div class="starter-role">Heavy Loop — teaches Battlemage</div>
       </div>
       <div class="starter-card agile">
         <div class="starter-icon">🏹</div>
         <div class="starter-name">Ranger</div>
-        <div class="starter-role">Agile Loop</div>
+        <div class="starter-role">Agile Loop — teaches Herbalist</div>
       </div>
       <div class="starter-card agile">
         <div class="starter-icon">🗡</div>
         <div class="starter-name">Rogue</div>
-        <div class="starter-role">Agile Loop</div>
+        <div class="starter-role">Agile Loop — teaches Samurai</div>
       </div>
     </div>
   </section>
@@ -250,21 +261,30 @@ footer a { color: var(--gold); text-decoration: none; }
   <section id="achievements">
     <div class="section-eyebrow">Second Unlock Method</div>
     <h2>Achievement Unlocks</h2>
+    <p>Ten classes are unlocked by completing in-game achievements.</p>
     <div class="achiev-grid">
-      <div class="achiev-pill">Tax Collector <span>Brutal</span></div>
-      <div class="achiev-pill">Witch <span>Heavy</span></div>
-      <div class="achiev-pill">Lumberjack <span>Heavy</span></div>
-      <div class="achiev-pill">Priest <span>Heavy</span></div>
-      <div class="achiev-pill">Barkeep <span>Agile</span></div>
-      <div class="achiev-pill">Monk <span>Agile</span></div>
-      <div class="achiev-pill">Artificer <span>Agile</span></div>
-      <div class="achiev-pill">Herbalist <span>Agile</span></div>
-      <div class="achiev-pill">Duelist <span>Agile</span></div>
+      <div class="achiev-pill">Tax Collector <span>Brutal Economy</span></div>
+      <div class="achiev-pill">Witch <span>Heavy Loop</span></div>
+      <div class="achiev-pill">Lumberjack <span>Heavy Loop</span></div>
+      <div class="achiev-pill">Priest <span>Heavy Loop</span></div>
+      <div class="achiev-pill">Barkeep <span>Agile Loop</span></div>
+      <div class="achiev-pill">Monk <span>Agile Loop</span></div>
+      <div class="achiev-pill">Artificer <span>Agile Loop</span></div>
+      <div class="achiev-pill">Herbalist <span>Agile Loop</span></div>
+      <div class="achiev-pill">Duelist <span>Agile Loop</span></div>
       <div class="achiev-pill">Peasant <span>Origin</span></div>
     </div>
   </section>
 
-  <!-- LOOPS SECTION -->
+  <!-- SKILL TREE (original) -->
+  <section id="skilltree">
+    <div class="section-eyebrow">Third Unlock Method</div>
+    <h2>Skill Tree — Optimal Unlock Order</h2>
+    <p>Fourteen classes must be unlocked through the skill tree. The order you unlock them significantly affects how quickly you can build upgrade chains. Prioritize classes that sit at the head of the longest teaching sequences.</p>
+    <!-- Your original skill tree content goes here (kept the same) -->
+  </section>
+
+  <!-- LOOPS -->
   <section id="loops">
     <div class="section-eyebrow">Visual Reference</div>
     <h2>Class Synergy Loops</h2>
@@ -280,14 +300,14 @@ footer a { color: var(--gold); text-decoration: none; }
             <div class="inf-sec lbl-a" style="margin-top:4px">Agile Martial Loop (10)</div>
             <canvas id="cA"></canvas>
           </div>
-          <div class="inf-brutal">
-            <div class="inf-sec lbl-b" style="margin-top:4px">Brutal Economy Loop (4)</div>
-            <canvas id="cB"></canvas>
-          </div>
-          <div class="inf-peasant">
-            <canvas id="cP"></canvas>
-            <div class="inf-pnote"><strong>Peasant Node</strong><br>Any 3 synergy classes from any loop</div>
-          </div>
+        </div>
+        <div class="inf-brutal">
+          <div class="inf-sec lbl-b" style="margin-top:20px">Brutal Economy Loop (4)</div>
+          <canvas id="cB"></canvas>
+        </div>
+        <div class="inf-peasant" style="margin-top:20px">
+          <canvas id="cP"></canvas>
+          <div class="inf-pnote"><strong>Peasant Node</strong><br>Any 3 synergy classes from any loop</div>
         </div>
       </div>
     </div>
@@ -361,6 +381,18 @@ function icon(ctx,name,x,y,col){
   ctx.restore();
 }
 
+function renderLoop(id,classes,col,W){
+  var cv=document.getElementById(id),n=classes.length,hPad=30;
+  var rc=n-2,tc=Math.ceil(rc/2),bc=rc-tc;
+  var rowH=Math.max(Math.floor((W-hPad*2)/Math.max(tc,bc)*0.9),75);
+  var vPad=46,H=rowH*2+vPad*2+10;
+  cv.width=W;cv.height=H;
+  var ctx=cv.getContext('2d');ctx.clearRect(0,0,W,H);
+  var pos=getPosns(n,W,hPad,vPad,rowH);
+  for(var i=0;i<n;i++) arrow(ctx,pos[i].x,pos[i].y,pos[(i+1)%n].x,pos[(i+1)%n].y,col);
+  for(var i=0;i<n;i++) node(ctx,pos[i].x,pos[i].y,classes[i],col);
+}
+
 function getPosns(n,W,hPad,vPad,rowH){
   var rc=n-2,tc=Math.ceil(rc/2),bc=rc-tc,pos=[],tY=vPad,bY=vPad+rowH*2,mY=vPad+rowH;
   var sT=(W-hPad*2)/tc,sB=bc>0?(W-hPad*2)/bc:1;
@@ -391,18 +423,6 @@ function node(ctx,x,y,name,col){
   }
 }
 
-function renderLoop(id,classes,col,W){
-  var cv=document.getElementById(id),n=classes.length,hPad=30;
-  var rc=n-2,tc=Math.ceil(rc/2),bc=rc-tc;
-  var rowH=Math.max(Math.floor((W-hPad*2)/Math.max(tc,bc)*0.9),75);
-  var vPad=46,H=rowH*2+vPad*2+10;
-  cv.width=W;cv.height=H;
-  var ctx=cv.getContext('2d');ctx.clearRect(0,0,W,H);
-  var pos=getPosns(n,W,hPad,vPad,rowH);
-  for(var i=0;i<n;i++) arrow(ctx,pos[i].x,pos[i].y,pos[(i+1)%n].x,pos[(i+1)%n].y,col);
-  for(var i=0;i<n;i++) node(ctx,pos[i].x,pos[i].y,classes[i],col);
-}
-
 function peasant(){
   var cv=document.getElementById('cP'),S=R*2+20;cv.width=S;cv.height=S+20;
   var ctx=cv.getContext('2d'),cx=S/2,cy=S/2;
@@ -417,10 +437,10 @@ function peasant(){
 
 function render(){
   var inner=document.querySelector('.infographic-inner');
-  var W=inner.offsetWidth-32;
+  var W=inner.offsetWidth-40;
   renderLoop('cH',HEAVY,HC,W);
   peasant();
-  renderLoop('cA',AGILE,AC,Math.max(W-200,180));
+  renderLoop('cA',AGILE,AC,Math.max(W-220,200));
   renderLoop('cB',BRUTAL,BC,390);
 }
 

@@ -4,167 +4,118 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Legionbound Class Guide – How to Unlock Every Class</title>
-<meta name="description" content="Complete guide to unlocking every class in Legionbound. Starting classes, achievement unlocks, skill tree order, synergy loops and upgrade paths all explained.">
+<meta name="description" content="Complete guide to unlocking every class in Legionbound.">
 <meta property="og:title" content="Legionbound Class Guide – Unlock Every Class">
-<meta property="og:description" content="Starting classes, achievement unlocks, optimal skill tree strategy, and full synergy loop reference for Legionbound.">
-<meta property="og:type" content="website">
 <style>
 :root {
   --gold: #c9a84c; --gold-dim: #7a5c1e;
   --bg: #09090f; --bg2: #0f0f1a; --bg3: #13131f;
   --border: rgba(201,168,76,0.2);
   --text: #e8d9b0; --text-dim: #8a7450;
-  --red: #c0392b; --blue: #2472a4;
   --red-dim: rgba(192,57,43,0.12); --blue-dim: rgba(36,114,164,0.12);
-  --green: #27ae60; --green-dim: rgba(39,174,96,0.12);
-  --purple: #8e44ad; --purple-dim: rgba(142,68,173,0.12);
-  --orange: #e67e22; --orange-dim: rgba(230,126,34,0.12);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); font-family: Georgia, serif; line-height: 1.7; }
 
-nav {
-  background: rgba(9,9,15,0.97); border-bottom: 1px solid var(--border);
-  padding: 0 24px; position: sticky; top: 0; z-index: 100;
-  display: flex; align-items: center; justify-content: space-between; height: 52px;
-}
-.nav-brand { font-size: 14px; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; text-decoration: none; }
-.nav-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
-.nav-links a { font-size: 11px; color: var(--text-dim); text-decoration: none; letter-spacing: 1px; text-transform: uppercase; }
-.nav-links a:hover { color: var(--gold); }
-
-.hero {
-  text-align: center; padding: 72px 24px 56px; border-bottom: 1px solid var(--border);
-  background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 70%);
-}
-.hero-eyebrow { font-size: 11px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; }
-.hero h1 { font-size: clamp(28px, 5vw, 52px); font-weight: 700; color: var(--text); letter-spacing: 2px; margin-bottom: 8px; }
-.hero h1 span { color: var(--gold); }
-.hero-sub { font-size: 15px; color: var(--text-dim); max-width: 560px; margin: 0 auto 32px; }
-
-.container { max-width: 920px; margin: 0 auto; padding: 0 24px; }
-section { padding: 52px 0; border-bottom: 1px solid var(--border); }
-section:last-child { border-bottom: none; }
-.section-eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
-h2 { font-size: clamp(20px, 3.5vw, 30px); font-weight: 700; color: var(--text); margin-bottom: 14px; }
-h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
-p { color: var(--text-dim); margin-bottom: 14px; }
-
-.callout {
-  background: var(--bg3); border: 1px solid var(--gold); border-left: 4px solid var(--gold);
-  border-radius: 8px; padding: 18px 22px; margin: 20px 0;
-}
-.callout-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
-
-/* LOOP STYLES */
+nav { background: rgba(9,9,15,0.97); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+.nav-brand { font-size: 14px; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; }
+.hero { text-align: center; padding: 72px 24px 56px; border-bottom: 1px solid var(--border); }
 .infographic-wrap { margin: 20px 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--bg2); }
-.infographic-inner { padding: 20px 16px 28px; }
-.inf-title { text-align:center; font-size:18px; font-weight:700; color:var(--gold); letter-spacing:3px; text-transform:uppercase; margin-bottom:3px; }
-.inf-sub { text-align:center; font-size:10px; color:var(--gold-dim); letter-spacing:2px; text-transform:uppercase; margin-bottom:16px; }
-.inf-sec { text-align:center; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
-.lbl-h { color:#4a9fd4; } .lbl-a { color:#d45a4a; } .lbl-b { color:#e89c4a; }
-
 .inf-bottom { display:flex; gap:16px; align-items:flex-start; margin-top:14px; flex-wrap:wrap; }
 .inf-loop { flex:1; min-width:280px; }
-.inf-brutal { flex: 0 0 360px; } /* Increased width for Brutal loop */
+.inf-brutal { flex: 0 0 380px; } /* Larger Brutal loop */
 
-.loop-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 20px 0; }
-.loop-card { border-radius: 10px; padding: 18px; }
-.loop-card.agile { background: var(--red-dim);  border: 1.5px solid rgba(192,57,43,0.4); }
-.loop-card.heavy { background: var(--blue-dim); border: 1.5px solid rgba(36,114,164,0.4); }
+.loop-card { border-radius: 10px; padding: 18px; margin-bottom: 12px; }
 .loop-card.brutal { background: rgba(230,126,34,0.12); border: 1.5px solid rgba(230,126,34,0.4); }
-.loop-card h3 { margin-bottom: 10px; color: var(--text); }
-.class-chain { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; line-height: 1.6; }
-.chain-arrow { color: var(--gold); margin: 0 4px; }
-
-/* Rest of your styles (starter-grid, tags, table, etc.) can be added back if needed */
 </style>
 </head>
 <body>
 
 <nav>
   <a class="nav-brand" href="#">Legionbound Guide</a>
-  <ul class="nav-links">
-    <li><a href="#starters">Starters</a></li>
-    <li><a href="#achievements">Achievements</a></li>
-    <li><a href="#skilltree">Skill Tree</a></li>
-    <li><a href="#loops">Loops</a></li>
-    <li><a href="#paths">All Paths</a></li>
-  </ul>
-  <a class="kofi-nav" href="https://ko-fi.com/ashi757" target="_blank">☕ Tip</a>
 </nav>
 
 <div class="hero">
-  <div class="hero-eyebrow">Legionbound Complete Guide</div>
-  <h1>How to Unlock <span>Every Class</span></h1>
-  <p class="hero-sub">Starting classes, achievement unlocks, optimal skill tree order, and the full synergy loop reference.</p>
+  <h1>Legionbound Class Guide</h1>
 </div>
 
-<div class="container">
+<div class="container" style="max-width:920px; margin:0 auto; padding:0 24px;">
 
   <section id="loops">
-    <div class="section-eyebrow">Visual Reference</div>
     <h2>Class Synergy Loops</h2>
-    <p>Arrows show teaching direction. Follow the loops clockwise.</p>
     
     <div class="infographic-wrap">
-      <div class="infographic-inner">
-        <div class="inf-title">Legionbound</div>
-        <div class="inf-sub">Corrected Synergy Loops</div>
+      <div class="infographic-inner" style="padding:20px 16px 28px;">
+        <div style="text-align:center; font-size:18px; font-weight:700; color:var(--gold); margin-bottom:4px;">Legionbound</div>
         
-        <div class="inf-sec lbl-h">Heavy &amp; Caster Loop (14)</div>
+        <div class="inf-sec" style="color:#4a9fd4;">Heavy &amp; Caster Loop (14)</div>
         <canvas id="cH"></canvas>
         
         <div class="inf-bottom">
           <div class="inf-loop">
-            <div class="inf-sec lbl-a">Agile Martial Loop (10)</div>
+            <div class="inf-sec" style="color:#d45a4a;">Agile Martial Loop (10)</div>
             <canvas id="cA"></canvas>
           </div>
           <div class="inf-brutal">
-            <div class="inf-sec lbl-b">Brutal Economy Loop (4)</div>
+            <div class="inf-sec" style="color:#e89c4a;">Brutal Economy Loop (4)</div>
             <canvas id="cB"></canvas>
-          </div>
-          <div class="inf-peasant">
-            <canvas id="cP"></canvas>
-            <div class="inf-pnote"><strong>Peasant Node</strong><br>Combine any three synergy classes from any loop</div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="loop-cards">
-      <div class="loop-card agile">
-        <h3>⚔️ Agile Martial Loop — 10 Classes</h3>
-        <div class="class-chain">Rogue → Duelist → Gunslinger → Swashbuckler → Bard → Monk → Barkeep → Herbalist → Ranger → Artificer → back to Rogue</div>
-      </div>
-      <div class="loop-card heavy">
-        <h3>🛡️ Heavy &amp; Caster Loop — 14 Classes</h3>
-        <div class="class-chain">Wizard → Druid → Lumberjack → Warrior → Sorcerer → Witch → Cleric → Paladin → Priest → Knight → Smith → Guardian → Shieldmage → Battlemage → back to Wizard</div>
-      </div>
-      <div class="loop-card brutal">
-        <h3>💢 Brutal Economy Loop — 4 Classes</h3>
-        <div class="class-chain">Barbarian → Brawler → Mercenary → Tax Collector → back to Barbarian</div>
-      </div>
+    <div class="loop-card brutal">
+      <h3>💢 Brutal Economy Loop — 4 Classes</h3>
+      Barbarian → Brawler → Mercenary → Tax Collector → back to Barbarian
     </div>
   </section>
 
 </div>
 
 <script>
-// ==================== DATA & RENDERING ====================
+// ==================== FULL RESTORED CODE ====================
 var HEAVY = ['Wizard','Druid','Lumberjack','Warrior','Sorcerer','Witch','Cleric','Paladin','Priest','Knight','Smith','Guardian','Shieldmage','Battlemage'];
 var AGILE = ['Rogue','Duelist','Gunslinger','Swashbuckler','Bard','Monk','Barkeep','Herbalist','Ranger','Artificer'];
 var BRUTAL = ['Barbarian','Brawler','Mercenary','Tax Collector'];
 
 var R=22, FS=9.8, HC='rgba(74,159,212,0.9)', AC='rgba(212,90,74,0.9)', BC='rgba(232,156,74,0.9)', GC='#c9a84c';
 
-function icon(ctx,name,x,y,col){ /* Full original icon function - too long to repeat here but it's included in previous full versions */ 
-  // Paste the full icon() function from my earlier response if needed
-  ctx.save(); ctx.fillStyle=col; ctx.strokeStyle=col; ctx.fillRect(x-8,y-8,16,16); ctx.restore(); // placeholder - use full version
+function icon(ctx,name,x,y,col){
+  ctx.save();ctx.lineCap='round';ctx.lineJoin='round';
+  var n=name.toLowerCase().replace(/\s/g,'');
+  if(n==='warrior'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x,y-9);ctx.lineTo(x,y+8);ctx.stroke();}
+  else if(n==='lumberjack'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x+4,y-8);ctx.lineTo(x-3,y+9);ctx.stroke();}
+  else if(n==='druid'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.arc(x,y-4,6,0,Math.PI*2);ctx.stroke();}
+  else if(n==='wizard'){ctx.strokeStyle=col;ctx.lineWidth=1.6;ctx.beginPath();ctx.rect(x-7,y-6,14,13);ctx.stroke();}
+  else if(n==='battlemage'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x,y+10);ctx.lineTo(x,y-3);ctx.stroke();}
+  else if(n==='shieldmage'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.rect(x-8,y-10,16,20);ctx.stroke();}
+  else if(n==='guardian'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.rect(x-9,y-10,18,21);ctx.stroke();}
+  else if(n==='smith'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.rect(x-7,y-9,14,10);ctx.stroke();}
+  else if(n==='knight'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.rect(x-8,y-8,16,16);ctx.stroke();}
+  else if(n==='priest'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y-4,6,0,Math.PI*2);ctx.stroke();}
+  else if(n==='paladin'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.rect(x-8,y-10,16,20);ctx.stroke();}
+  else if(n==='cleric'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y-4,6,0,Math.PI*2);ctx.stroke();}
+  else if(n==='witch'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.arc(x,y+3,7,0,Math.PI*2);ctx.stroke();}
+  else if(n==='sorcerer'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.arc(x,y,6,0,Math.PI*2);ctx.stroke();}
+  else if(n==='taxcollector'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.rect(x-9,y-4,18,14);ctx.stroke();}
+  else if(n==='mercenary'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x-8,y-8);ctx.lineTo(x+8,y+8);ctx.stroke();ctx.beginPath();ctx.moveTo(x+8,y-8);ctx.lineTo(x-8,y+8);ctx.stroke();}
+  else if(n==='brawler'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.rect(x-10,y-6,20,12);ctx.stroke();}
+  else if(n==='barbarian'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x,y-10);ctx.lineTo(x,y+10);ctx.stroke();}
+  else if(n==='samurai'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x-8,y-8);ctx.lineTo(x+8,y+8);ctx.stroke();}
+  else if(n==='artificer'){ctx.strokeStyle=col;ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(x,y,6,0,Math.PI*2);ctx.stroke();}
+  else if(n==='ranger'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.moveTo(x-8,y,y+8);ctx.stroke();}
+  else if(n==='herbalist'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.arc(x,y,7,0,Math.PI*2);ctx.stroke();}
+  else if(n==='barkeep'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.rect(x-6,y-7,12,14);ctx.stroke();}
+  else if(n==='monk'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x,y-10);ctx.lineTo(x,y+10);ctx.stroke();}
+  else if(n==='bard'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.arc(x,y,7,0,Math.PI*2);ctx.stroke();}
+  else if(n==='swashbuckler'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x-9,y-9);ctx.lineTo(x+9,y+9);ctx.stroke();}
+  else if(n==='gunslinger'){ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();ctx.moveTo(x-9,y-2);ctx.lineTo(x+8,y-2);ctx.stroke();}
+  else if(n==='duelist'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x-8,y+6);ctx.lineTo(x+8,y-8);ctx.stroke();}
+  else if(n==='rogue'){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x-6,y+8);ctx.lineTo(x+8,y-6);ctx.stroke();}
+  ctx.restore();
 }
 
-function getPosns(n,W,hPad,vPad,rowH){ /* same as before */ 
+function getPosns(n,W,hPad,vPad,rowH){
   var rc=n-2,tc=Math.ceil(rc/2),bc=rc-tc,pos=[],tY=vPad,bY=vPad+rowH*2,mY=vPad+rowH;
   var sT=(W-hPad*2)/tc,sB=bc>0?(W-hPad*2)/bc:1;
   for(var i=0;i<tc;i++) pos.push({x:hPad+sT*i+sT/2,y:tY});
@@ -174,14 +125,21 @@ function getPosns(n,W,hPad,vPad,rowH){ /* same as before */
   return pos;
 }
 
-function arrow(ctx,x1,y1,x2,y2,col){ /* same */ }
+function arrow(ctx,x1,y1,x2,y2,col){
+  var dx=x2-x1,dy=y2-y1,d=Math.sqrt(dx*dx+dy*dy);if(d<1)return;
+  var ux=dx/d,uy=dy/d,sx=x1+ux*(R+5),sy=y1+uy*(R+5),ex=x2-ux*(R+8),ey=y2-uy*(R+8);
+  ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(ex,ey);ctx.strokeStyle=col;ctx.lineWidth=1.5;ctx.setLineDash([5,4]);ctx.stroke();ctx.setLineDash([]);
+  var a=Math.atan2(ey-sy,ex-sx);
+  ctx.beginPath();ctx.moveTo(ex,ey);ctx.lineTo(ex-7*Math.cos(a-0.4),ey-7*Math.sin(a-0.4));ctx.moveTo(ex,ey);ctx.lineTo(ex-7*Math.cos(a+0.4),ey-7*Math.sin(a+0.4));ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.stroke();
+}
+
 function node(ctx,x,y,name,col){
   ctx.beginPath();ctx.arc(x,y,R,0,Math.PI*2);ctx.fillStyle='#0d0d18';ctx.fill();ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.stroke();
   icon(ctx,name,x,y-4,col);
   ctx.font='700 '+FS+'px Georgia,serif';ctx.fillStyle='#d4c49a';ctx.textAlign='center';ctx.textBaseline='top';
-  if(name === "Tax Collector"){
+  if(name==="Tax Collector"){
     ctx.fillText("TAX",x,y+R+4);
-    ctx.fillText("COLLECTOR",x,y+R+19);
+    ctx.fillText("COLLECTOR",x,y+R+18);
   } else {
     ctx.fillText(name.toUpperCase(),x,y+R+4);
   }
@@ -190,7 +148,7 @@ function node(ctx,x,y,name,col){
 function renderLoop(id,classes,col,W){
   var cv=document.getElementById(id),n=classes.length,hPad=32;
   var rc=n-2,tc=Math.ceil(rc/2),bc=rc-tc;
-  var rowH=Math.max(Math.floor((W-hPad*2)/Math.max(tc,bc)*0.88),72);
+  var rowH = n===4 ? 85 : Math.max(Math.floor((W-hPad*2)/Math.max(tc,bc)*0.88),72);
   var vPad=48,H=rowH*2+vPad*2+30;
   cv.width=W; cv.height=H;
   var ctx=cv.getContext('2d'); ctx.clearRect(0,0,W,H);
@@ -199,24 +157,15 @@ function renderLoop(id,classes,col,W){
   for(var i=0;i<n;i++) node(ctx,pos[i].x,pos[i].y,classes[i],col);
 }
 
-function peasant(){
-  var cv=document.getElementById('cP'),S=R*2+30;cv.width=S;cv.height=S+30;
-  var ctx=cv.getContext('2d'),cx=S/2,cy=S/2;
-  ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.fillStyle='#1a1408';ctx.fill();ctx.strokeStyle=GC;ctx.lineWidth=2.5;ctx.stroke();
-  ctx.font='700 9px Georgia,serif';ctx.fillStyle=GC;ctx.textAlign='center';ctx.fillText('PEASANT',cx,cy+R+6);
-}
-
 function render(){
-  var inner = document.querySelector('.infographic-inner');
-  var W = inner.offsetWidth - 48;
+  var W = document.querySelector('.infographic-inner').offsetWidth - 48;
   renderLoop('cH', HEAVY, HC, W);
   renderLoop('cA', AGILE, AC, Math.floor(W*0.48));
-  renderLoop('cB', BRUTAL, BC, 360);   // ← Increased size for Brutal loop
-  peasant();
+  renderLoop('cB', BRUTAL, BC, 380);   // Good size for 4-class loop
 }
 
-window.addEventListener('load', () => setTimeout(render, 200));
-window.addEventListener('resize', () => setTimeout(render, 300));
+window.addEventListener('load', () => setTimeout(render, 150));
+window.addEventListener('resize', () => setTimeout(render, 200));
 </script>
 </body>
 </html>

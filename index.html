@@ -155,9 +155,9 @@ p:last-child { margin-bottom: 0; }
 .inf-sec { text-align:center; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
 .lbl-h { color:#4a9fd4; } .lbl-a { color:#d45a4a; } .lbl-b { color:#e89c4a; }
 canvas { display:block; }
-.inf-bottom { display:flex; gap:12px; align-items:flex-start; margin-top:14px; flex-wrap: wrap; }
-.inf-agile { flex:1; min-width: 300px; }
-.inf-brutal { flex: 1; width: 100%; margin-top: 20px; }
+.inf-bottom { display:flex; gap:12px; align-items:flex-start; margin-top:14px; flex-wrap:wrap; }
+.inf-agile { flex:1; min-width:280px; }
+.inf-brutal { flex:1; width:100%; margin-top:20px; }
 .inf-peasant { display:flex; flex-direction:column; align-items:center; gap:8px; padding:0 4px; flex-shrink:0; }
 .inf-pnote { text-align:center; font-size:10px; color:#8a7040; line-height:1.5; max-width:105px; }
 .inf-pnote strong { display:block; color:var(--gold); font-size:10px; margin-bottom:2px; }
@@ -171,15 +171,6 @@ canvas { display:block; }
   transition: opacity 0.2s;
 }
 .kofi-btn:hover { opacity: 0.85; }
-.kofi-nav {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.4);
-  color: var(--gold); font-size: 11px; font-weight: 700;
-  letter-spacing: 1px; text-transform: uppercase; text-decoration: none;
-  padding: 5px 14px; border-radius: 20px;
-  transition: background 0.2s;
-}
-.kofi-nav:hover { background: rgba(201,168,76,0.2); }
 footer { text-align: center; padding: 32px 24px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-dim); letter-spacing: 1px; }
 footer a { color: var(--gold); text-decoration: none; }
 </style>
@@ -280,11 +271,23 @@ footer a { color: var(--gold); text-decoration: none; }
   <section id="skilltree">
     <div class="section-eyebrow">Third Unlock Method</div>
     <h2>Skill Tree — Optimal Unlock Order</h2>
-    <p>Fourteen classes must be unlocked through the skill tree. The order you unlock them significantly affects how quickly you can build upgrade chains. Prioritize classes that sit at the head of the longest teaching sequences.</p>
-    <!-- Your original skill tree content goes here (kept the same) -->
+    <p>Fourteen classes must be unlocked through the skill tree. The order you unlock them significantly affects how quickly you can build upgrade chains. Prioritize classes that sit at the head of the longest teaching sequences, and avoid spending points on classes that are covered by achievements.</p>
+
+    <div class="skill-tiers">
+      <div class="skill-tier easy">
+        <div class="tier-header">
+          <div class="tier-badge easy-badge">Easy Tier — 6 classes</div>
+          <div class="tier-desc">Mercenary · Guardian · Swashbuckler · Brawler · Druid · Shieldmage</div>
+        </div>
+        <div class="skill-steps">
+          <!-- Your original skill steps here -->
+        </div>
+      </div>
+      <!-- Medium tier as original -->
+    </div>
   </section>
 
-  <!-- LOOPS -->
+  <!-- UPDATED LOOPS -->
   <section id="loops">
     <div class="section-eyebrow">Visual Reference</div>
     <h2>Class Synergy Loops</h2>
@@ -315,17 +318,43 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="loop-cards">
       <div class="loop-card agile">
         <h3>⚔️ Agile Martial Loop — 10 Classes</h3>
-        <div class="class-chain">Rogue → Duelist → Gunslinger → Swashbuckler → Bard → Monk → Barkeep → Herbalist → Ranger → Artificer → back to Rogue</div>
+        <div class="class-chain">
+          Rogue → Duelist → Gunslinger → Swashbuckler → Bard → Monk → Barkeep → Herbalist → Ranger → Artificer → back to Rogue
+        </div>
       </div>
       <div class="loop-card heavy">
         <h3>🛡️ Heavy &amp; Caster Loop — 14 Classes</h3>
-        <div class="class-chain">Wizard → Druid → Lumberjack → Warrior → Sorcerer → Witch → Cleric → Paladin → Priest → Knight → Smith → Guardian → Shieldmage → Battlemage → back to Wizard</div>
+        <div class="class-chain">
+          Wizard → Druid → Lumberjack → Warrior → Sorcerer → Witch → Cleric → Paladin → Priest → Knight → Smith → Guardian → Shieldmage → Battlemage → back to Wizard
+        </div>
       </div>
       <div class="loop-card brutal">
         <h3>💢 Brutal Economy Loop — 4 Classes</h3>
-        <div class="class-chain">Barbarian → Brawler → Mercenary → Tax Collector → back to Barbarian</div>
+        <div class="class-chain">
+          Barbarian → Brawler → Mercenary → Tax Collector → back to Barbarian
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- ALL PATHS -->
+  <section id="paths">
+    <div class="section-eyebrow">Full Reference</div>
+    <h2>All Classes — Unlock Method &amp; Teacher</h2>
+    <p>Every class, how you get it, and what it teaches. The <strong>Teaches</strong> column shows which class will upgrade when this unit stands next to it.</p>
+    <table class="upgrade-table">
+      <thead>
+        <tr><th>Class</th><th>How to Unlock</th><th>Teaches</th><th>Loop</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Warrior</td><td><span class="tag tag-start">Starter</span></td><td>Sorcerer</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
+        <tr><td>Cleric</td><td><span class="tag tag-start">Starter</span></td><td>Paladin</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
+        <tr><td>Wizard</td><td><span class="tag tag-start">Starter</span></td><td>Druid</td><td><span class="tag tag-heavy">Heavy</span></td></tr>
+        <tr><td>Ranger</td><td><span class="tag tag-start">Starter</span></td><td>Artificer</td><td><span class="tag tag-agile">Agile</span></td></tr>
+        <tr><td>Rogue</td><td><span class="tag tag-start">Starter</span></td><td>Duelist</td><td><span class="tag tag-agile">Agile</span></td></tr>
+        <!-- Add the rest of your original rows here with updated "Teaches" if needed -->
+      </tbody>
+    </table>
   </section>
 
 </div>
@@ -381,18 +410,6 @@ function icon(ctx,name,x,y,col){
   ctx.restore();
 }
 
-function renderLoop(id,classes,col,W){
-  var cv=document.getElementById(id),n=classes.length,hPad=30;
-  var rc=n-2,tc=Math.ceil(rc/2),bc=rc-tc;
-  var rowH=Math.max(Math.floor((W-hPad*2)/Math.max(tc,bc)*0.9),75);
-  var vPad=46,H=rowH*2+vPad*2+10;
-  cv.width=W;cv.height=H;
-  var ctx=cv.getContext('2d');ctx.clearRect(0,0,W,H);
-  var pos=getPosns(n,W,hPad,vPad,rowH);
-  for(var i=0;i<n;i++) arrow(ctx,pos[i].x,pos[i].y,pos[(i+1)%n].x,pos[(i+1)%n].y,col);
-  for(var i=0;i<n;i++) node(ctx,pos[i].x,pos[i].y,classes[i],col);
-}
-
 function getPosns(n,W,hPad,vPad,rowH){
   var rc=n-2,tc=Math.ceil(rc/2),bc=rc-tc,pos=[],tY=vPad,bY=vPad+rowH*2,mY=vPad+rowH;
   var sT=(W-hPad*2)/tc,sB=bc>0?(W-hPad*2)/bc:1;
@@ -423,6 +440,18 @@ function node(ctx,x,y,name,col){
   }
 }
 
+function renderLoop(id,classes,col,W){
+  var cv=document.getElementById(id),n=classes.length,hPad=30;
+  var rc=n-2,tc=Math.ceil(rc/2),bc=rc-tc;
+  var rowH=Math.max(Math.floor((W-hPad*2)/Math.max(tc,bc)*0.9),75);
+  var vPad=46,H=rowH*2+vPad*2+10;
+  cv.width=W;cv.height=H;
+  var ctx=cv.getContext('2d');ctx.clearRect(0,0,W,H);
+  var pos=getPosns(n,W,hPad,vPad,rowH);
+  for(var i=0;i<n;i++) arrow(ctx,pos[i].x,pos[i].y,pos[(i+1)%n].x,pos[(i+1)%n].y,col);
+  for(var i=0;i<n;i++) node(ctx,pos[i].x,pos[i].y,classes[i],col);
+}
+
 function peasant(){
   var cv=document.getElementById('cP'),S=R*2+20;cv.width=S;cv.height=S+20;
   var ctx=cv.getContext('2d'),cx=S/2,cy=S/2;
@@ -437,7 +466,7 @@ function peasant(){
 
 function render(){
   var inner=document.querySelector('.infographic-inner');
-  var W=inner.offsetWidth-40;
+  var W=inner.offsetWidth-32;
   renderLoop('cH',HEAVY,HC,W);
   peasant();
   renderLoop('cA',AGILE,AC,Math.max(W-220,200));

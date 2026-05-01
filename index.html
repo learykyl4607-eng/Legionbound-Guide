@@ -441,70 +441,150 @@ footer a { color: var(--gold); text-decoration: none; }
   </section>
 
   <!-- INFOGRAPHIC -->
-  <section id="loops">
-    <div class="section-eyebrow">Visual Reference</div>
-    <h2>Class Synergy Loops</h2>
-    <p>Arrows show the teaching direction. Each class teaches the one the arrow points to. Follow the loop clockwise to see the full upgrade chain.</p>
-    <div class="infographic-wrap">
-      <div class="infographic-inner">
-        <div class="inf-title">Legionbound</div>
-        <div class="inf-sub">Class Synergies</div>
-        <div class="inf-sec lbl-h">Heavy &amp; Caster Loop</div>
-        <canvas id="cH"></canvas>
-        <div class="inf-bottom">
-          <div class="inf-agile">
-            <div class="inf-sec lbl-a" style="margin-top:4px">Agile Martial Loop</div>
-            <canvas id="cA"></canvas>
-          </div>
-          <div class="inf-peasant">
-            <canvas id="cP"></canvas>
-            <div class="inf-pnote"><strong>Any 3 Synergy Classes</strong>Combine any three from either loop</div>
+ <section id="loops">
+  <div class="section-eyebrow">Visual Reference</div>
+  <h2>Class Synergy Loops</h2>
+  <p>
+    Arrows show the teaching direction. Each class teaches the one the arrow points to.
+    Follow each loop clockwise to see the full upgrade chain.
+  </p>
+
+  <div class="infographic-wrap">
+    <div class="infographic-inner">
+      <div class="inf-title">Legionbound</div>
+      <div class="inf-sub">Class Synergies</div>
+
+      <div class="inf-sec lbl-h">Heavy & Caster Loop</div>
+      <canvas id="cH"></canvas>
+
+      <div class="inf-bottom">
+        <div class="inf-agile">
+          <div class="inf-sec lbl-a" style="margin-top:4px">Agile Martial Loop</div>
+          <canvas id="cA"></canvas>
+        </div>
+
+        <div class="inf-peasant">
+          <canvas id="cP"></canvas>
+          <div class="inf-pnote">
+            <strong>Peasant Synergy Node</strong><br/>
+            Combine any three classes from any loop path
           </div>
         </div>
       </div>
     </div>
-    <div class="loop-cards">
-      <div class="loop-card agile">
-        <h3>⚔ Agile Martial Loop — 11 Classes</h3>
-        <div class="class-chain">
-          <span class="cls-pill">Samurai</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Artificer</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Ranger</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Herbalist</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Barkeep</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Monk</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Bard</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Swashbuckler</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Gunslinger</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Duelist</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Rogue</span><span class="chain-arrow">→ loops back</span>
-        </div>
-      </div>
-      <div class="loop-card heavy">
-        <h3>🛡 Heavy &amp; Caster Loop — 18 Classes</h3>
-        <div class="class-chain">
-          <span class="cls-pill">Warrior</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Lumberjack</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Druid</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Wizard</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Battlemage</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Shieldmage</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Guardian</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Smith</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Knight</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Priest</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Paladin</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Cleric</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Witch</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Sorcerer</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Tax Collector</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Mercenary</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Brawler</span><span class="chain-arrow">→</span>
-          <span class="cls-pill">Barbarian</span><span class="chain-arrow">→ loops back</span>
-        </div>
+  </div>
+
+  <div class="loop-cards">
+
+    <!-- AGILE LOOP -->
+    <div class="loop-card agile">
+      <h3>⚔ Agile Martial Loop — 10 Classes</h3>
+      <div class="class-chain">
+        <span class="cls-pill">Rogue</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Duelist</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Gunslinger</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Swashbuckler</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Bard</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Monk</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Barkeep</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Herbalist</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Ranger</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Artificer</span><span class="chain-arrow">→ loops back</span>
       </div>
     </div>
-  </section>
+
+    <!-- HEAVY LOOP -->
+    <div class="loop-card heavy">
+      <h3>🛡 Heavy & Caster Loop — 14 Classes</h3>
+      <div class="class-chain">
+        <span class="cls-pill">Wizard</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Druid</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Lumberjack</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Warrior</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Sorcerer</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Witch</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Cleric</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Paladin</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Priest</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Knight</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Smith</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Guardian</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Shieldmage</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Battlemage</span><span class="chain-arrow">→ loops back</span>
+      </div>
+    </div>
+
+    <!-- ECONOMY / BRUTE LOOP -->
+    <div class="loop-card heavy">
+      <h3>💢 Brutal Economy Loop — 5 Classes</h3>
+      <div class="class-chain">
+        <span class="cls-pill">Barbarian</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Brawler</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Mercenary</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Tax Collector</span><span class="chain-arrow">→</span>
+        <span class="cls-pill">Barbarian</span><span class="chain-arrow">→ loops back</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FULL PATH TABLE -->
+<section id="paths">
+  <div class="section-eyebrow">Full Reference</div>
+  <h2>All Classes — Unlock Method & Teacher</h2>
+  <p>
+    Every class, how you get it, and what it teaches.
+    The <strong>Teaches</strong> column shows the next class in its synergy loop.
+  </p>
+
+  <table class="upgrade-table">
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>How to Unlock</th>
+        <th>Teaches (Next Class)</th>
+        <th>Loop</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr><td>Warrior</td><td>Starter</td><td>Lumberjack</td><td>Heavy</td></tr>
+      <tr><td>Lumberjack</td><td>Skill Tree</td><td>Druid</td><td>Heavy</td></tr>
+      <tr><td>Druid</td><td>Skill Tree</td><td>Wizard</td><td>Heavy</td></tr>
+      <tr><td>Wizard</td><td>Starter</td><td>Battlemage</td><td>Heavy</td></tr>
+      <tr><td>Battlemage</td><td>Skill Tree</td><td>Shieldmage</td><td>Heavy</td></tr>
+      <tr><td>Shieldmage</td><td>Skill Tree</td><td>Guardian</td><td>Heavy</td></tr>
+      <tr><td>Guardian</td><td>Skill Tree</td><td>Smith</td><td>Heavy</td></tr>
+      <tr><td>Smith</td><td>Skill Tree</td><td>Knight</td><td>Heavy</td></tr>
+      <tr><td>Knight</td><td>Skill Tree</td><td>Priest</td><td>Heavy</td></tr>
+      <tr><td>Priest</td><td>Achievement</td><td>Paladin</td><td>Heavy</td></tr>
+      <tr><td>Paladin</td><td>Skill Tree</td><td>Cleric</td><td>Heavy</td></tr>
+      <tr><td>Cleric</td><td>Starter</td><td>Witch</td><td>Heavy</td></tr>
+      <tr><td>Witch</td><td>Skill Tree</td><td>Sorcerer</td><td>Heavy</td></tr>
+      <tr><td>Sorcerer</td><td>Skill Tree</td><td>Tax Collector</td><td>Heavy</td></tr>
+
+      <tr><td>Tax Collector</td><td>Skill Tree</td><td>Barbarian</td><td>Brute</td></tr>
+      <tr><td>Barbarian</td><td>Skill Tree</td><td>Brawler</td><td>Brute</td></tr>
+      <tr><td>Brawler</td><td>Skill Tree</td><td>Mercenary</td><td>Brute</td></tr>
+      <tr><td>Mercenary</td><td>Skill Tree</td><td>Tax Collector</td><td>Brute</td></tr>
+
+      <tr><td>Rogue</td><td>Starter</td><td>Duelist</td><td>Agile</td></tr>
+      <tr><td>Duelist</td><td>Skill Tree</td><td>Gunslinger</td><td>Agile</td></tr>
+      <tr><td>Gunslinger</td><td>Skill Tree</td><td>Swashbuckler</td><td>Agile</td></tr>
+      <tr><td>Swashbuckler</td><td>Skill Tree</td><td>Bard</td><td>Agile</td></tr>
+      <tr><td>Bard</td><td>Skill Tree</td><td>Monk</td><td>Agile</td></tr>
+      <tr><td>Monk</td><td>Skill Tree</td><td>Barkeep</td><td>Agile</td></tr>
+      <tr><td>Barkeep</td><td>Skill Tree</td><td>Herbalist</td><td>Agile</td></tr>
+      <tr><td>Herbalist</td><td>Skill Tree</td><td>Ranger</td><td>Agile</td></tr>
+      <tr><td>Ranger</td><td>Starter</td><td>Artificer</td><td>Agile</td></tr>
+      <tr><td>Artificer</td><td>Skill Tree</td><td>Samurai</td><td>Agile</td></tr>
+      <tr><td>Samurai</td><td>Skill Tree</td><td>Rogue</td><td>Agile</td></tr>
+
+      <tr><td>Peasant</td><td>Achievement</td><td>—</td><td>Origin</td></tr>
+    </tbody>
+  </table>
+</section>
 
   <!-- ALL PATHS -->
   <section id="paths">

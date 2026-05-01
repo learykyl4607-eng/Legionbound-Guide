@@ -24,27 +24,154 @@
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); font-family: Georgia, serif; line-height: 1.7; }
 
-nav { background: rgba(9,9,15,0.97); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+nav {
+  background: rgba(9,9,15,0.97); border-bottom: 1px solid var(--border);
+  padding: 0 24px; position: sticky; top: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between; height: 52px;
+}
 .nav-brand { font-size: 14px; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; text-decoration: none; }
 .nav-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
 .nav-links a { font-size: 11px; color: var(--text-dim); text-decoration: none; letter-spacing: 1px; text-transform: uppercase; }
 .nav-links a:hover { color: var(--gold); }
 
-.hero { text-align: center; padding: 72px 24px 56px; border-bottom: 1px solid var(--border); background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 70%); }
+.hero {
+  text-align: center; padding: 72px 24px 56px; border-bottom: 1px solid var(--border);
+  background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 70%);
+}
 .hero-eyebrow { font-size: 11px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; }
 .hero h1 { font-size: clamp(28px, 5vw, 52px); font-weight: 700; color: var(--text); letter-spacing: 2px; margin-bottom: 8px; }
 .hero h1 span { color: var(--gold); }
 .hero-sub { font-size: 15px; color: var(--text-dim); max-width: 560px; margin: 0 auto 32px; }
+.hero-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.badge { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; border: 1px solid var(--border); color: var(--text-dim); }
 
 .container { max-width: 920px; margin: 0 auto; padding: 0 24px; }
 section { padding: 52px 0; border-bottom: 1px solid var(--border); }
+section:last-child { border-bottom: none; }
 .section-eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
 h2 { font-size: clamp(20px, 3.5vw, 30px); font-weight: 700; color: var(--text); margin-bottom: 14px; }
 h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+p { color: var(--text-dim); margin-bottom: 14px; }
+p:last-child { margin-bottom: 0; }
 
+.callout {
+  background: var(--bg3); border: 1px solid var(--gold); border-left: 4px solid var(--gold);
+  border-radius: 8px; padding: 18px 22px; margin: 20px 0;
+}
+.callout-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.callout p { color: var(--text); margin: 0; }
+
+/* STARTING CLASSES */
+.starter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 20px 0; }
+.starter-card {
+  background: var(--bg3); border-radius: 10px; padding: 18px 16px; text-align: center;
+  border: 1px solid var(--border);
+}
+.starter-card.agile { border-color: rgba(192,57,43,0.4); background: var(--red-dim); }
+.starter-card.heavy { border-color: rgba(36,114,164,0.4); background: var(--blue-dim); }
+.starter-icon { font-size: 28px; margin-bottom: 8px; }
+.starter-name { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text); margin-bottom: 4px; }
+.starter-role { font-size: 11px; color: var(--text-dim); }
+.starter-card.agile .starter-name { color: #e87060; }
+.starter-card.heavy .starter-name { color: #60a8e8; }
+
+/* UNLOCK METHOD TAGS */
+.tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+.tag-start  { background: rgba(201,168,76,0.15);  border: 1px solid rgba(201,168,76,0.35);   color: var(--gold); }
+.tag-achiev { background: var(--green-dim);        border: 1px solid rgba(39,174,96,0.35);    color: #5dca8a; }
+.tag-easy   { background: var(--blue-dim);         border: 1px solid rgba(36,114,164,0.35);   color: #60a8e8; }
+.tag-medium { background: var(--purple-dim);       border: 1px solid rgba(142,68,173,0.35);   color: #c390e8; }
+.tag-agile  { background: var(--red-dim);          border: 1px solid rgba(192,57,43,0.35);    color: #e8a090; }
+.tag-heavy  { background: var(--blue-dim);         border: 1px solid rgba(36,114,164,0.35);   color: #90bce8; }
+.tag-origin { background: rgba(201,168,76,0.12);   border: 1px solid rgba(201,168,76,0.3);    color: var(--gold); }
+
+/* ACHIEVEMENT UNLOCKS */
+.achiev-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; margin: 20px 0; }
+.achiev-pill {
+  background: var(--green-dim); border: 1px solid rgba(39,174,96,0.3);
+  border-radius: 8px; padding: 10px 12px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+  color: #5dca8a;
+}
+.achiev-pill span { display: block; font-size: 10px; font-weight: 400; color: var(--text-dim); margin-top: 2px; text-transform: none; letter-spacing: 0; }
+
+/* SKILL TREE */
+.skill-tiers { display: flex; flex-direction: column; gap: 28px; margin-top: 24px; }
+.skill-tier { border-radius: 10px; overflow: hidden; border: 1.5px solid; }
+.skill-tier.easy   { border-color: rgba(36,114,164,0.4); }
+.skill-tier.medium { border-color: rgba(142,68,173,0.4); }
+.tier-header { padding: 14px 18px; display: flex; align-items: center; gap: 12px; }
+.skill-tier.easy   .tier-header { background: rgba(36,114,164,0.12); }
+.skill-tier.medium .tier-header { background: rgba(142,68,173,0.12); }
+.tier-badge { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; }
+.easy-badge   { background: rgba(36,114,164,0.2);  border: 1px solid rgba(36,114,164,0.4);  color: #60a8e8; }
+.medium-badge { background: rgba(142,68,173,0.2);  border: 1px solid rgba(142,68,173,0.4);  color: #c390e8; }
+.tier-desc { font-size: 12px; color: var(--text-dim); }
+.skill-steps { padding: 0 18px 18px; display: flex; flex-direction: column; gap: 0; }
+.skill-step { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid rgba(201,168,76,0.07); }
+.skill-step:last-child { border-bottom: none; }
+.step-num {
+  width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700;
+}
+.easy   .step-num { background: rgba(36,114,164,0.2);  border: 1px solid rgba(36,114,164,0.4);  color: #60a8e8; }
+.medium .step-num { background: rgba(142,68,173,0.2);  border: 1px solid rgba(142,68,173,0.4);  color: #c390e8; }
+.step-body { flex: 1; }
+.step-name { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+.step-chain { font-size: 11px; color: var(--gold); margin-bottom: 3px; letter-spacing: 0.3px; }
+.step-reason { font-size: 12px; color: var(--text-dim); line-height: 1.55; }
+
+/* LOOP CARDS */
+.loop-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+@media(max-width:600px){ .loop-cards { grid-template-columns: 1fr; } }
+.loop-card { border-radius: 10px; padding: 18px; }
+.loop-card.agile { background: var(--red-dim);  border: 1.5px solid rgba(192,57,43,0.4); }
+.loop-card.heavy { background: var(--blue-dim); border: 1.5px solid rgba(36,114,164,0.4); }
+.loop-card.brutal { background: rgba(230,126,34,0.12); border: 1.5px solid rgba(230,126,34,0.4); }
+.loop-card h3 { margin-bottom: 10px; }
+.loop-card.agile h3 { color: #e87060; }
+.loop-card.heavy h3 { color: #60a8e8; }
+.loop-card.brutal h3 { color: #e8b060; }
+.class-chain { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+.cls-pill { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 9px; border-radius: 12px; white-space: nowrap; }
+.agile .cls-pill { background: rgba(192,57,43,0.18); border: 1px solid rgba(192,57,43,0.4); color: #e8a090; }
+.heavy .cls-pill { background: rgba(36,114,164,0.18); border: 1px solid rgba(36,114,164,0.4); color: #90bce8; }
+.brutal .cls-pill { background: rgba(230,126,34,0.18); border: 1px solid rgba(230,126,34,0.4); color: #f0c080; }
+.chain-arrow { color: var(--text-dim); font-size: 10px; opacity: 0.6; }
+
+/* UPGRADE TABLE */
+.upgrade-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 13px; }
+.upgrade-table th { text-align: left; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); padding: 10px 14px; border-bottom: 1px solid var(--border); }
+.upgrade-table td { padding: 9px 14px; border-bottom: 1px solid rgba(201,168,76,0.07); color: var(--text-dim); vertical-align: middle; }
+.upgrade-table tr:hover td { background: rgba(201,168,76,0.03); }
+.upgrade-table td:first-child { color: var(--text); font-weight: 700; }
+
+/* INFOGRAPHIC */
 .infographic-wrap { margin: 20px 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--bg2); }
-.inf-bottom { display:flex; gap:16px; align-items:flex-start; margin-top:14px; flex-wrap:wrap; }
-.inf-brutal { flex: 0 0 390px; }
+.infographic-inner { padding: 20px 16px 28px; }
+.inf-title { text-align:center; font-size:18px; font-weight:700; color:var(--gold); letter-spacing:3px; text-transform:uppercase; margin-bottom:3px; }
+.inf-sub { text-align:center; font-size:10px; color:var(--gold-dim); letter-spacing:2px; text-transform:uppercase; margin-bottom:16px; }
+.inf-sec { text-align:center; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
+.lbl-h { color:#4a9fd4; } .lbl-a { color:#d45a4a; } .lbl-b { color:#e89c4a; }
+canvas { display:block; }
+.inf-bottom { display:flex; gap:12px; align-items:flex-start; margin-top:14px; }
+.inf-agile { flex:1; }
+.inf-peasant { display:flex; flex-direction:column; align-items:center; gap:8px; padding:0 4px; flex-shrink:0; }
+.inf-pnote { text-align:center; font-size:10px; color:#8a7040; line-height:1.5; max-width:105px; }
+.inf-pnote strong { display:block; color:var(--gold); font-size:10px; margin-bottom:2px; }
+
+.kofi-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gold); color: #09090f;
+  font-family: Georgia, serif; font-size: 12px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none;
+  padding: 9px 20px; border-radius: 24px;
+  transition: opacity 0.2s;
+}
+.kofi-btn:hover { opacity: 0.85; }
+footer { text-align: center; padding: 32px 24px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-dim); letter-spacing: 1px; }
+footer a { color: var(--gold); text-decoration: none; }
 </style>
 </head>
 <body>
@@ -65,20 +192,57 @@ h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; 
   <div class="hero-eyebrow">Legionbound Complete Guide</div>
   <h1>How to Unlock <span>Every Class</span></h1>
   <p class="hero-sub">Starting classes, achievement unlocks, optimal skill tree order, and the full synergy loop reference — all in one place.</p>
+  <div class="hero-badges">
+    <span class="badge">🎮 PC / Steam</span>
+    <span class="badge">29 Classes</span>
+    <span class="badge">5 Starting Classes</span>
+    <span class="badge">3 Unlock Methods</span>
+  </div>
 </div>
 
 <div class="container">
+
+  <!-- HOW IT WORKS -->
+  <section id="mechanic">
+    <div class="section-eyebrow">Core Mechanic</div>
+    <h2>How Class Upgrades Work</h2>
+    <p>Legionbound uses a proximity-based upgrade system. Classes are arranged in three synergy loops.</p>
+    <div class="callout">
+      <div class="callout-label">The Rule</div>
+      <p>Each class <strong>teaches the next class in its loop</strong>. Position the teacher adjacent to the student to trigger the upgrade.</p>
+    </div>
+  </section>
 
   <!-- STARTING CLASSES -->
   <section id="starters">
     <div class="section-eyebrow">Available From The Start</div>
     <h2>Starting Classes</h2>
     <div class="starter-grid">
-      <div class="starter-card heavy"><div class="starter-icon">🪓</div><div class="starter-name">Warrior</div></div>
-      <div class="starter-card heavy"><div class="starter-icon">📜</div><div class="starter-name">Cleric</div></div>
-      <div class="starter-card heavy"><div class="starter-icon">📖</div><div class="starter-name">Wizard</div></div>
-      <div class="starter-card agile"><div class="starter-icon">🏹</div><div class="starter-name">Ranger</div></div>
-      <div class="starter-card agile"><div class="starter-icon">🗡</div><div class="starter-name">Rogue</div></div>
+      <div class="starter-card heavy">
+        <div class="starter-icon">🪓</div>
+        <div class="starter-name">Warrior</div>
+        <div class="starter-role">Heavy Loop</div>
+      </div>
+      <div class="starter-card heavy">
+        <div class="starter-icon">📜</div>
+        <div class="starter-name">Cleric</div>
+        <div class="starter-role">Heavy Loop</div>
+      </div>
+      <div class="starter-card heavy">
+        <div class="starter-icon">📖</div>
+        <div class="starter-name">Wizard</div>
+        <div class="starter-role">Heavy Loop</div>
+      </div>
+      <div class="starter-card agile">
+        <div class="starter-icon">🏹</div>
+        <div class="starter-name">Ranger</div>
+        <div class="starter-role">Agile Loop</div>
+      </div>
+      <div class="starter-card agile">
+        <div class="starter-icon">🗡</div>
+        <div class="starter-name">Rogue</div>
+        <div class="starter-role">Agile Loop</div>
+      </div>
     </div>
   </section>
 
@@ -100,24 +264,29 @@ h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; 
     </div>
   </section>
 
-  <!-- LOOPS -->
+  <!-- LOOPS SECTION -->
   <section id="loops">
     <div class="section-eyebrow">Visual Reference</div>
     <h2>Class Synergy Loops</h2>
+    <p>Arrows show the teaching direction. Follow the loop clockwise.</p>
     <div class="infographic-wrap">
       <div class="infographic-inner">
         <div class="inf-title">Legionbound</div>
         <div class="inf-sub">Corrected Synergy Loops</div>
-        <div class="inf-sec" style="color:#4a9fd4">Heavy &amp; Caster Loop (14)</div>
+        <div class="inf-sec lbl-h">Heavy &amp; Caster Loop (14)</div>
         <canvas id="cH"></canvas>
         <div class="inf-bottom">
-          <div>
-            <div class="inf-sec" style="color:#d45a4a">Agile Martial Loop (10)</div>
+          <div class="inf-agile">
+            <div class="inf-sec lbl-a" style="margin-top:4px">Agile Martial Loop (10)</div>
             <canvas id="cA"></canvas>
           </div>
           <div class="inf-brutal">
-            <div class="inf-sec" style="color:#e89c4a">Brutal Economy Loop (4)</div>
+            <div class="inf-sec lbl-b" style="margin-top:4px">Brutal Economy Loop (4)</div>
             <canvas id="cB"></canvas>
+          </div>
+          <div class="inf-peasant">
+            <canvas id="cP"></canvas>
+            <div class="inf-pnote"><strong>Peasant Node</strong><br>Any 3 synergy classes from any loop</div>
           </div>
         </div>
       </div>
@@ -126,15 +295,15 @@ h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; 
     <div class="loop-cards">
       <div class="loop-card agile">
         <h3>⚔️ Agile Martial Loop — 10 Classes</h3>
-        Rogue → Duelist → Gunslinger → Swashbuckler → Bard → Monk → Barkeep → Herbalist → Ranger → Artificer → back to Rogue
+        <div class="class-chain">Rogue → Duelist → Gunslinger → Swashbuckler → Bard → Monk → Barkeep → Herbalist → Ranger → Artificer → back to Rogue</div>
       </div>
       <div class="loop-card heavy">
         <h3>🛡️ Heavy &amp; Caster Loop — 14 Classes</h3>
-        Wizard → Druid → Lumberjack → Warrior → Sorcerer → Witch → Cleric → Paladin → Priest → Knight → Smith → Guardian → Shieldmage → Battlemage → back to Wizard
+        <div class="class-chain">Wizard → Druid → Lumberjack → Warrior → Sorcerer → Witch → Cleric → Paladin → Priest → Knight → Smith → Guardian → Shieldmage → Battlemage → back to Wizard</div>
       </div>
       <div class="loop-card brutal">
         <h3>💢 Brutal Economy Loop — 4 Classes</h3>
-        Barbarian → Brawler → Mercenary → Tax Collector → back to Barbarian
+        <div class="class-chain">Barbarian → Brawler → Mercenary → Tax Collector → back to Barbarian</div>
       </div>
     </div>
   </section>
@@ -146,10 +315,11 @@ h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; 
     This guide is free and always will be.<br>If it helped you, a coffee keeps it updated.
   </p>
   <a class="kofi-btn" href="https://ko-fi.com/ashi757" target="_blank">☕ &nbsp;Support the Guide</a>
+  <p style="margin-top:20px">Legionbound Class Guide &nbsp;·&nbsp; Fan-made resource &nbsp;·&nbsp; Not affiliated with the developers</p>
+  <p style="margin-top:6px"><a href="https://store.steampowered.com/search/?term=legionbound" target="_blank">Find Legionbound on Steam →</a></p>
 </footer>
 
 <script>
-// ==================== FULL ORIGINAL ICON FUNCTION ====================
 var HEAVY = ['Wizard','Druid','Lumberjack','Warrior','Sorcerer','Witch','Cleric','Paladin','Priest','Knight','Smith','Guardian','Shieldmage','Battlemage'];
 var AGILE = ['Rogue','Duelist','Gunslinger','Swashbuckler','Bard','Monk','Barkeep','Herbalist','Ranger','Artificer'];
 var BRUTAL = ['Barbarian','Brawler','Mercenary','Tax Collector'];
@@ -222,30 +392,40 @@ function node(ctx,x,y,name,col){
 }
 
 function renderLoop(id,classes,col,W){
-  var cv=document.getElementById(id),n=classes.length,hPad=35;
-  var H = n <= 4 ? 260 : 340;
-  cv.width=W; cv.height=H;
+  var cv=document.getElementById(id),n=classes.length,hPad=30;
+  var rc=n-2,tc=Math.ceil(rc/2),bc=rc-tc;
+  var rowH=Math.max(Math.floor((W-hPad*2)/Math.max(tc,bc)*0.9),75);
+  var vPad=46,H=rowH*2+vPad*2+10;
+  cv.width=W;cv.height=H;
   var ctx=cv.getContext('2d');ctx.clearRect(0,0,W,H);
-  var pos = [];
-  for(var i=0;i<n;i++){
-    var ang = (i/n)*Math.PI*2 - Math.PI/2;
-    var rad = n<=4 ? Math.min(W,H)*0.36 : Math.min(W,H)*0.41;
-    pos.push({x: W/2 + Math.cos(ang)*rad, y: H/2 + Math.sin(ang)*rad*0.85});
-  }
+  var pos=getPosns(n,W,hPad,vPad,rowH);
   for(var i=0;i<n;i++) arrow(ctx,pos[i].x,pos[i].y,pos[(i+1)%n].x,pos[(i+1)%n].y,col);
   for(var i=0;i<n;i++) node(ctx,pos[i].x,pos[i].y,classes[i],col);
 }
 
-function render(){
-  var inner = document.querySelector('.infographic-inner');
-  var W = inner ? inner.offsetWidth - 50 : 820;
-  renderLoop('cH', HEAVY, HC, W);
-  renderLoop('cA', AGILE, AC, Math.floor(W*0.48));
-  renderLoop('cB', BRUTAL, BC, 390);
+function peasant(){
+  var cv=document.getElementById('cP'),S=R*2+20;cv.width=S;cv.height=S+20;
+  var ctx=cv.getContext('2d'),cx=S/2,cy=S/2;
+  ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.fillStyle='#1a1408';ctx.fill();ctx.strokeStyle=GC;ctx.lineWidth=2;ctx.stroke();
+  ctx.save();ctx.lineCap='round';ctx.strokeStyle=GC;ctx.lineWidth=1.5;
+  ctx.beginPath();ctx.moveTo(cx,cy+8);ctx.lineTo(cx,cy-7);ctx.stroke();
+  ctx.fillStyle=GC;[[0,-8],[-1,-6],[1,-6],[-3,-4],[3,-4],[-5,-3],[5,-3]].forEach(function(p){ctx.beginPath();ctx.arc(cx+p[0],cy+p[1],1.5,0,Math.PI*2);ctx.fill();});
+  ctx.beginPath();ctx.moveTo(cx-4,cy+5);ctx.lineTo(cx+4,cy+5);ctx.strokeStyle='#d4c49a';ctx.lineWidth=1.5;ctx.stroke();
+  ctx.restore();
+  ctx.font='700 '+FS+'px Georgia,serif';ctx.fillStyle=GC;ctx.textAlign='center';ctx.textBaseline='top';ctx.fillText('PEASANT',cx,cy+R+5);
 }
 
-window.addEventListener('load', () => setTimeout(render, 150));
-window.addEventListener('resize', () => setTimeout(render, 200));
+function render(){
+  var inner=document.querySelector('.infographic-inner');
+  var W=inner.offsetWidth-32;
+  renderLoop('cH',HEAVY,HC,W);
+  peasant();
+  renderLoop('cA',AGILE,AC,Math.max(W-200,180));
+  renderLoop('cB',BRUTAL,BC,390);
+}
+
+window.addEventListener('load',function(){setTimeout(render,150);});
+window.addEventListener('resize',function(){setTimeout(render,150);});
 </script>
 </body>
 </html>

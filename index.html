@@ -216,10 +216,10 @@ footer a { color: var(--gold); text-decoration: none; }
   <section id="mechanic">
     <div class="section-eyebrow">Core Mechanic</div>
     <h2>How Class Upgrades Work</h2>
-    <p>Legionbound uses a proximity-based upgrade system. Classes are arranged in three synergy loops — place a class next to the one that follows it in the loop and it will teach that unit how to upgrade.</p>
+    <p>Legionbound uses a synergy-based upgrade system. When a teacher class is on the field with its student class, it provides upgrade experience, eventually allowing the student to promote to the upgraded form.</p>
     <div class="callout">
       <div class="callout-label">The Rule</div>
-      <p>Each class <strong>teaches the next class in its loop</strong> how to upgrade. Position the teacher adjacent to the student on the battlefield to trigger the upgrade. The arrows in the infographic show the teaching direction.</p>
+      <p>Each class <strong>teaches the next class in its loop</strong> simply by being present on the battlefield. Proximity is not required — having both classes on the field is sufficient.</p>
     </div>
   </section>
 
@@ -227,37 +227,37 @@ footer a { color: var(--gold); text-decoration: none; }
   <section id="starters">
     <div class="section-eyebrow">Available From The Start</div>
     <h2>Starting Classes</h2>
-    <p>These five classes are available immediately with no unlocking required. Notice that they give you entry points into both loops right away — Warrior and Cleric on the Heavy side, Ranger, Rogue and Wizard spread across key positions.</p>
+    <p>These five classes are available immediately with no unlocking required. They provide strong entry points into both major loops.</p>
     <div class="starter-grid">
       <div class="starter-card heavy">
         <div class="starter-icon">🪓</div>
         <div class="starter-name">Warrior</div>
-        <div class="starter-role">Heavy Loop — teaches Lumberjack</div>
+        <div class="starter-role">Heavy Loop — teaches Sorcerer</div>
       </div>
       <div class="starter-card heavy">
         <div class="starter-icon">📜</div>
         <div class="starter-name">Cleric</div>
-        <div class="starter-role">Heavy Loop — teaches Witch</div>
+        <div class="starter-role">Heavy Loop — teaches Paladin</div>
       </div>
       <div class="starter-card heavy">
         <div class="starter-icon">📖</div>
         <div class="starter-name">Wizard</div>
-        <div class="starter-role">Heavy Loop — teaches Battlemage</div>
+        <div class="starter-role">Heavy Loop — teaches Druid</div>
       </div>
       <div class="starter-card agile">
         <div class="starter-icon">🏹</div>
         <div class="starter-name">Ranger</div>
-        <div class="starter-role">Agile Loop — teaches Herbalist</div>
+        <div class="starter-role">Agile Loop — teaches Artificer</div>
       </div>
       <div class="starter-card agile">
         <div class="starter-icon">🗡</div>
         <div class="starter-name">Rogue</div>
-        <div class="starter-role">Agile Loop — teaches Samurai</div>
+        <div class="starter-role">Agile Loop — teaches Duelist</div>
       </div>
     </div>
     <div class="callout">
       <div class="callout-label">Starting Strategy</div>
-      <p>Warrior and Cleric give you two separate entry points into the Heavy loop immediately. Position them near their respective students early — Warrior near a Lumberjack slot, Cleric near a Witch slot — to start teaching chains as soon as possible.</p>
+      <p>Bring Warrior and Cleric early to begin progressing the Heavy loop. Keeping key teachers on the field will steadily grant upgrade experience to their students.</p>
     </div>
   </section>
 
@@ -265,7 +265,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <section id="achievements">
     <div class="section-eyebrow">Second Unlock Method</div>
     <h2>Achievement Unlocks</h2>
-    <p>Ten classes are unlocked by completing in-game achievements. These are earned through normal gameplay, so you'll pick them up naturally — but knowing which classes they are helps you plan around them rather than spending skill tree points unnecessarily.</p>
+    <p>Ten classes are unlocked by completing in-game achievements. These are earned through normal gameplay — knowing them helps you plan skill tree spending more efficiently.</p>
     <div class="achiev-grid">
       <div class="achiev-pill">Tax Collector <span>Brutal Economy</span></div>
       <div class="achiev-pill">Witch <span>Heavy Loop</span></div>
@@ -279,16 +279,16 @@ footer a { color: var(--gold); text-decoration: none; }
       <div class="achiev-pill">Peasant <span>Origin</span></div>
     </div>
     <div class="callout">
-      <div class="callout-label">What This Means For Skill Tree Planning</div>
-      <p>Since Lumberjack, Priest, Witch, Herbalist, Monk, Barkeep, Artificer, and Duelist all come free from achievements, <strong>don't spend skill tree points on classes you'll unlock anyway</strong>. Focus skill tree points on classes that aren't available through achievements — especially ones that sit at the start of long teaching chains.</p>
+      <div class="callout-label">Skill Tree Planning</div>
+      <p>Avoid spending skill tree points on classes you’ll unlock via achievements. Focus on classes that start long teaching chains.</p>
     </div>
   </section>
 
-  <!-- SKILL TREE (original optimal unlock order) -->
+  <!-- SKILL TREE -->
   <section id="skilltree">
     <div class="section-eyebrow">Third Unlock Method</div>
     <h2>Skill Tree — Optimal Unlock Order</h2>
-    <p>Fourteen classes must be unlocked through the skill tree. The order you unlock them significantly affects how quickly you can build upgrade chains. Prioritize classes that sit at the head of the longest teaching sequences, and avoid spending points on classes that are covered by achievements.</p>
+    <p>Fourteen classes must be unlocked through the skill tree. Prioritize classes that anchor long teaching sequences.</p>
 
     <div class="skill-tiers">
       <div class="skill-tier easy">
@@ -302,7 +302,7 @@ footer a { color: var(--gold); text-decoration: none; }
             <div class="step-body">
               <div class="step-name">Druid</div>
               <div class="step-chain">Druid → Wizard (starter) → Battlemage → Shieldmage</div>
-              <div class="step-reason">Your starter Wizard is already on the field teaching Battlemage. Unlocking Druid adds a teacher for Wizard itself, extending the chain backwards and giving you three connected upgrades from a single unlock.</div>
+              <div class="step-reason">Your starter Wizard is already on the field. Unlocking Druid extends the chain backwards, giving you multiple connected upgrades from one skill point.</div>
             </div>
           </div>
           <div class="skill-step">
@@ -310,7 +310,7 @@ footer a { color: var(--gold); text-decoration: none; }
             <div class="step-body">
               <div class="step-name">Guardian</div>
               <div class="step-chain">Shieldmage → Guardian → Smith → Knight (→ Priest, earned via achievement)</div>
-              <div class="step-reason">Unlocking Guardian opens Smith and Knight downstream. Priest comes free from achievements, so once Knight is teaching Priest you get the full Smith → Knight → Priest chain without extra spend.</div>
+              <div class="step-reason">Unlocking Guardian opens Smith and Knight downstream. Priest comes free from achievements.</div>
             </div>
           </div>
           <div class="skill-step">
@@ -318,7 +318,7 @@ footer a { color: var(--gold); text-decoration: none; }
             <div class="step-body">
               <div class="step-name">Swashbuckler</div>
               <div class="step-chain">Swashbuckler → Gunslinger → Duelist (achievement) → Rogue (starter)</div>
-              <div class="step-reason">Swashbuckler kicks off the longest unlock chain in the Agile loop. Duelist comes free from achievements and Rogue is a starter, so you only need to unlock Swashbuckler and Gunslinger to complete this entire segment.</div>
+              <div class="step-reason">Swashbuckler starts the longest chain in the Agile loop. Duelist and Rogue are covered otherwise.</div>
             </div>
           </div>
           <div class="skill-step">
@@ -326,23 +326,23 @@ footer a { color: var(--gold); text-decoration: none; }
             <div class="step-body">
               <div class="step-name">Brawler</div>
               <div class="step-chain">Mercenary → Brawler → Barbarian → Warrior (starter)</div>
-              <div class="step-reason">Brawler teaches Barbarian which wraps the Heavy loop back to your starter Warrior. Mercenary is also in Easy tier so both will be available — unlock Brawler first since it's the longer chain anchor.</div>
+              <div class="step-reason">Brawler anchors a strong segment that wraps back to your starter Warrior.</div>
             </div>
           </div>
           <div class="skill-step">
             <div class="step-num">5</div>
             <div class="step-body">
               <div class="step-name">Mercenary</div>
-              <div class="step-chain">Tax Collector (achievement) → Mercenary → Brawler (already unlocked)</div>
-              <div class="step-reason">Tax Collector comes free from achievements, so unlocking Mercenary completes that segment automatically. With Brawler already on the field this closes a tight three-class chain with only one skill point.</div>
+              <div class="step-chain">Tax Collector (achievement) → Mercenary → Brawler</div>
+              <div class="step-reason">Tax Collector comes free, so one skill point completes this Brutal segment.</div>
             </div>
           </div>
           <div class="skill-step">
             <div class="step-num">6</div>
             <div class="step-body">
               <div class="step-name">Shieldmage</div>
-              <div class="step-chain">Battlemage → Shieldmage → Guardian (already unlocked)</div>
-              <div class="step-reason">Last in Easy tier because Guardian is already unlocked and Battlemage will be available through Wizard's teaching chain. Unlock Shieldmage to close the Battlemage → Shieldmage → Guardian segment.</div>
+              <div class="step-chain">Battlemage → Shieldmage → Guardian</div>
+              <div class="step-reason">Closes the chain started earlier with Druid and Wizard.</div>
             </div>
           </div>
         </div>
@@ -358,16 +358,16 @@ footer a { color: var(--gold); text-decoration: none; }
             <div class="step-num">1</div>
             <div class="step-body">
               <div class="step-name">Battlemage</div>
-              <div class="step-chain">Wizard (starter) → Battlemage → Shieldmage (Easy unlock)</div>
-              <div class="step-reason">Your starter Wizard is already teaching towards Battlemage. Unlocking it here connects the Druid → Wizard chain from Easy tier all the way through to Shieldmage and Guardian.</div>
+              <div class="step-chain">Wizard (starter) → Battlemage → Shieldmage</div>
+              <div class="step-reason">Connects the Druid → Wizard chain through to Guardian.</div>
             </div>
           </div>
           <div class="skill-step">
             <div class="step-num">2</div>
             <div class="step-body">
               <div class="step-name">Smith</div>
-              <div class="step-chain">Guardian (Easy unlock) → Smith → Knight → Priest (achievement)</div>
-              <div class="step-reason">With Guardian already unlocked, Smith slots directly into the chain. Knight and Priest follow immediately — Priest is free from achievements so this three-step chain costs only one skill point.</div>
+              <div class="step-chain">Guardian → Smith → Knight → Priest (achievement)</div>
+              <div class="step-reason">One point completes a strong Heavy chain.</div>
             </div>
           </div>
           <div class="skill-step">
@@ -375,7 +375,7 @@ footer a { color: var(--gold); text-decoration: none; }
             <div class="step-body">
               <div class="step-name">Sorcerer</div>
               <div class="step-chain">Witch (achievement) → Sorcerer → Tax Collector (achievement)</div>
-              <div class="step-reason">Both Witch and Tax Collector come free from achievements. Unlocking Sorcerer fills the only gap in this three-class segment of the Heavy loop for a single skill point.</div>
+              <div class="step-reason">Fills the only gap between two achievement classes.</div>
             </div>
           </div>
           <div class="skill-step">
@@ -383,39 +383,39 @@ footer a { color: var(--gold); text-decoration: none; }
             <div class="step-body">
               <div class="step-name">Paladin</div>
               <div class="step-chain">Priest (achievement) → Paladin → Cleric (starter)</div>
-              <div class="step-reason">Priest is free from achievements and Cleric is a starter — unlocking Paladin is the single link that completes this entire three-class segment with no further spend.</div>
+              <div class="step-reason">Completes the segment with one skill point.</div>
             </div>
           </div>
           <div class="skill-step">
             <div class="step-num">5</div>
             <div class="step-body">
               <div class="step-name">Barbarian</div>
-              <div class="step-chain">Brawler (Easy unlock) → Barbarian → Warrior (starter)</div>
-              <div class="step-reason">Brawler is already unlocked and Warrior is a starter. Unlocking Barbarian completes the loop wrap on the Heavy side — a single point closes the full Heavy loop.</div>
+              <div class="step-chain">Brawler → Barbarian → Warrior (starter)</div>
+              <div class="step-reason">Closes the Heavy loop wrap.</div>
             </div>
           </div>
           <div class="skill-step">
             <div class="step-num">6</div>
             <div class="step-body">
               <div class="step-name">Gunslinger</div>
-              <div class="step-chain">Swashbuckler (Easy unlock) → Gunslinger → Duelist (achievement)</div>
-              <div class="step-reason">Swashbuckler is already on the field and Duelist comes from achievements. One point fills the gap and completes the Swashbuckler → Gunslinger → Duelist → Rogue chain in the Agile loop.</div>
+              <div class="step-chain">Swashbuckler → Gunslinger → Duelist (achievement)</div>
+              <div class="step-reason">Completes the Agile segment with one point.</div>
             </div>
           </div>
           <div class="skill-step">
             <div class="step-num">7</div>
             <div class="step-body">
               <div class="step-name">Knight</div>
-              <div class="step-chain">Smith (already unlocked) → Knight → Priest (achievement)</div>
-              <div class="step-reason">Smith is already unlocked above and Priest is free. Knight fills the last gap in the Smith → Knight → Priest chain on the Heavy loop.</div>
+              <div class="step-chain">Smith → Knight → Priest (achievement)</div>
+              <div class="step-reason">Fills the final gap in the Smith-Knight-Priest chain.</div>
             </div>
           </div>
           <div class="skill-step">
             <div class="step-num">8</div>
             <div class="step-body">
               <div class="step-name">Bard</div>
-              <div class="step-chain">Monk (achievement) → Bard → Swashbuckler (Easy unlock)</div>
-              <div class="step-reason">Monk comes free and Swashbuckler is already unlocked. Bard is the single missing link in the Monk → Bard → Swashbuckler chain on the Agile loop.</div>
+              <div class="step-chain">Monk (achievement) → Bard → Swashbuckler</div>
+              <div class="step-reason">Single link needed for this Agile segment.</div>
             </div>
           </div>
           <div class="skill-step">
@@ -423,7 +423,7 @@ footer a { color: var(--gold); text-decoration: none; }
             <div class="step-body">
               <div class="step-name">Samurai</div>
               <div class="step-chain">Rogue (starter) → Samurai → Artificer (achievement)</div>
-              <div class="step-reason">Unlock last — Rogue is a starter and Artificer comes free from achievements. Samurai completes the Agile loop wrap, giving you the full circular chain on both loops.</div>
+              <div class="step-reason">Completes the Agile loop wrap.</div>
             </div>
           </div>
         </div>
@@ -435,11 +435,11 @@ footer a { color: var(--gold); text-decoration: none; }
   <section id="loops">
     <div class="section-eyebrow">Visual Reference</div>
     <h2>Class Synergy Loops</h2>
-    <p>Arrows show the teaching direction. Each class teaches the one the arrow points to. Follow the loop clockwise to see the full upgrade chain.</p>
+    <p>Each class grants upgrade experience to the next class in the loop when both are on the field. Follow the arrows clockwise.</p>
     <div class="infographic-wrap">
       <div class="infographic-inner">
         <div class="inf-title">Legionbound</div>
-        <div class="inf-sub">Corrected Synergy Loops</div>
+        <div class="inf-sub">Synergy Loops</div>
         <div class="inf-sec lbl-h">Heavy &amp; Caster Loop (14)</div>
         <canvas id="cH"></canvas>
         <div class="inf-bottom">
@@ -485,7 +485,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <section id="paths">
     <div class="section-eyebrow">Full Reference</div>
     <h2>All Classes — Unlock Method &amp; Teacher</h2>
-    <p>Every class, how you get it, and what it teaches. The <strong>Teaches</strong> column shows which class will upgrade when this unit stands next to it.</p>
+    <p>Every class, how you get it, and which class it teaches (grants upgrade experience to) when on the field.</p>
     <table class="upgrade-table">
       <thead>
         <tr><th>Class</th><th>How to Unlock</th><th>Teaches</th><th>Loop</th></tr>
